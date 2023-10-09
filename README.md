@@ -1,6 +1,6 @@
-# Awesome CV 11ty
+# Awesome CV Astro
 
-A fork of [awesome-cv-react](https://github.com/sygint/awesome-cv-react) to [eleventy](https://www.11ty.dev/). This fork has easier markup and style via 11ty's WebC and PostCSS and much simpler build process and dependency tree with 11ty. It has the same easy configuration via YAML.
+A fork of [awesome-cv-react](https://github.com/sygint/awesome-cv-react) to [Eleventy](https://www.11ty.dev/) and now [Astro](https://astro.build/). This fork has easier markup and generation Astro and style via vanilla CSS. It has the same easy configuration via YAML.
 
 ## Preview
 
@@ -10,23 +10,59 @@ You can see [PDF](build/resume.pdf)
 
 # Getting Started
 
-This project is powered by [eleventy](https://github.com/11ty/eleventy/).
+This project is powered by [Astro](https://astro.build/).
 
 # Configuration
 
-All of the config is found in `details.yaml` in the `src/_data` directory. It's fairly self explanatory, feel free to hit me up if you have any questions.
+All of the config is found in `resume-details.yaml` in the root directory. It's fairly self explanatory, feel free to hit me up if you have any questions.
 
-# Available Scripts
+## Project Structure
 
-In the project directory, you can run:
+Inside of your Astro project, you'll see the following folders and files:
 
-### `npm run build`
+```text
+/
+...
+├── public/
+├── scripts/
+│   ├── build.ts
+│   ├── convertToPdf.ts
+│   └── convertToPng.ts
+├── src/
+│   ├── components/
+│   ├── fonts/
+│   ├── pages/
+│   │   └── resume.astro
+│   └── style/
+...
+```
 
-Builds your `resume.pdf` to the `build` folder. It utilizes [Puppeteer](https://github.com/puppeteer/puppeteer) to save the HTML as a `.pdf`.
+`./dist` - Generator build output
 
-## `npm run dev`
+`scripts/` - Scripts for pdf and png generation
 
-Runs a nodemon watch script that watches for changes and rebuilds your `resume.pdf`.
+`src/` - Resume source code
+
+`src/components/` - Resume components
+
+`src/fonts/` - Fonts used
+
+`src/pages/resume.astro` - Main resume layout file
+
+`src/styles/` - CSS used for styling resume
+
+Any static assets, like images, can be placed in the `public/` directory.
+
+## Commands
+
+All commands are run from the root of the project, from a terminal:
+
+| Command                    | Action                                                    |
+| :------------------------- | :-------------------------------------------------------- |
+| `pnpm install`             | Installs dependencies                                     |
+| `pnpm dev` or `pnpm start` | Starts local dev server at `localhost:4321`               |
+| `pnpm build`               | Build your resume to `./dist/` and convert to PDF and PNG |
+| `pnpm preview`             | Preview your already built resume in the browser          |
 
 ## Work In Progress
 

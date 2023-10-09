@@ -1,0 +1,91 @@
+---
+const { type, items } = Astro.props;
+
+function join(items, delimiter) {
+  return (
+    items.slice(0, items.length - 1).join(`${delimiter} `) +
+    `${delimiter} and ` +
+    items.slice(items.length - 1)
+  );
+}
+---
+
+<>
+  {
+    type === "2-col"
+      ? items.map(({ title, items }) => (
+          <div class="sub-section two-col">
+            <div class="sub-section-title">{title}</div>
+            <div class="sub-section-items">{join(items, ",")}</div>
+          </div>
+        ))
+      : items.map(({ organization, location, position, dates, items }) => (
+          <div>
+            <div class="sub-section-header">
+              <span class="organization">{organization}</span>
+              <span class="location">{location}</span>
+            </div>
+            <div class="sub-section-header">
+              <span class="position">{position}</span>
+              <span class="dates">{dates}</span>
+            </div>
+            <ul class="sub-section-items">
+              {items.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          </div>
+        ))
+  }
+</>
+
+<style>
+  .sub-section.two-col  {
+    display: flex;
+    flex-direction: row;
+    gap: 25pt;
+    margin-bottom: 0.15cm;
+  }
+
+  .sub-section-title {
+    width: 3.75cm;
+
+    font-weight: var(--fontWeightBold);
+    text-align: right;
+    color: var(--colorText);
+  }
+
+  .sub-section-items {
+    width: 100%;
+    padding-left: 13px;
+
+    font-size: 9pt;
+    font-weight: var(--fontWeightLight);
+  }
+
+  .sub-section-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .organization {
+    font-weight: var(--fontWeightBold);
+    color: var(--colorText);
+  }
+
+  .location {
+    color: var(--colorhighlight);
+    font-style: italic;
+  }
+
+  .position {
+    font-size: var(--positionFontSize);
+    text-transform: uppercase;
+  }
+
+  .dates {
+    font-size: var(--datesFontSize);
+    font-style: italic;
+  }
+</style>

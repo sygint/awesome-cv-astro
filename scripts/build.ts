@@ -3,7 +3,7 @@ import convertToPng from "./convertToPng";
 
 (async () => {
   try {
-    const port = 8080;
+    const port = 4321;
     await convertToPdf(port, "./build/resume.pdf");
     await convertToPng("./build/resume.pdf");
   } catch (e) {

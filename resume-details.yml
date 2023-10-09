@@ -1,8 +1,8 @@
 name: First M. Last
 positions:
-  - Software Engineer
-  - Front End Engineer
-phone: "1234567890"
+  - Orporis Ipsum Facere
+  - Illum pariatur
+phone: (123) 456-7890
 email: email@example.com
 website: example.com
 github: github.com/username
@@ -32,37 +32,12 @@ sections:
           - Inventore
           - Voluptas
           - Ratione
-      - title: Operating Systems
-        items:
-          - Cupiditate
-          - Aut
-          - Aperiam
-          - Et
-          - Vel
-          - Non
-      - title: Virtualization
-        items:
-          - In
-          - Quo
-          - Aut
-          - Vitae
-          - Totam
-      - title: Other
-        items:
-          - Aut
-          - Sint
-          - Molestiae
-          - Libero
-          - Est
-          - Quo
-          - Sed
-          - Dolor
   - title: Volunteering
     items:
-      - organization: Underdog Devs
-        position: Mentor
-        location: Remote
-        dates: Sept 2020 - Present
+      - organization: Nam quam
+        position: Accusantium sit eum
+        location: Nemo, iure dolores
+        dates: Jan 2020 - Present
         items:
           - Dignissimos excepturi nesciunt officia non non dolores
           - Voluptas eveniet iure recusandae quod voluptas repellat nemo
@@ -70,9 +45,9 @@ sections:
   - title: Projects
     items:
       - organization: Minus Dignissimos Sapiente
-        location: Remote
-        dates: Oct 2022 - Present
-        position: Creator / Software Engineer
+        location: Nisi, delectus
+        dates: Oct 2018 - Jan 2020
+        position: Eveniet Corrupti
         items:
           - Ut deleniti voluptatibus occaecati at id suscipit et voluptas
           - At nihil est earum ut sed amet officiis
@@ -81,27 +56,27 @@ sections:
   - title: Experience
     items:
       - organization: Fugit Et Est
-        position: Full Stack Engineer
-        location: Remote
-        dates: Nov 2020 - Jan 2022
+        position: Beatae mollitia cupiditate
+        location: Quam, laudantium
+        dates: Nov 2014 - Oct 2018
         items:
           - Repudiandae quos distinctio velit adipisci sapiente
           - Culpa impedit quibusdam sed non sed doloremque
           - Ut atque perspiciatis rerum laudantium id recusandae omnis
           - In aut voluptatem ipsum voluptatem qui numquam sint perferendis
       - organization: Laudantium Id Recusandae
-        location: Remote
-        position: Front End Engineer
-        dates: Aug 2020 - May 2021
+        location: Tempore, maxime
+        position: Ducimus Unde Incidunt
+        dates: Aug 2012 - May 2014
         items:
           - Repudiandae quos distinctio velit adipisci sapiente
           - Culpa impedit quibusdam sed non sed doloremque
           - Ut atque perspiciatis rerum laudantium id recusandae omnis
           - In aut voluptatem ipsum voluptatem qui numquam sint perferendis
       - organization: Quisquam Sit Iure
-        location: Remote
-        position: Full Stack Engineer
-        dates: July 2020 - July 2020
+        location: Eius, Reprehenderit
+        position: Assumenda Asperiores
+        dates: Jun 2008 - July 2012
         items:
           - Repudiandae quos distinctio velit adipisci sapiente
           - Culpa impedit quibusdam sed non sed doloremque

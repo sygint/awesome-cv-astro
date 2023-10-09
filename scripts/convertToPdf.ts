@@ -14,7 +14,7 @@ export default async (port: number, output: string) => {
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
   );
 
-  const url = `http://localhost:${port}`;
+  const url = `http://localhost:${port}/resume`;
   await page.goto(url, { waitUntil: "networkidle0" });
 
   // To reflect CSS used for screens instead of print

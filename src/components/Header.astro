@@ -1,24 +1,25 @@
-<header webc:root="override" class="main-header">
-  <span class="name" @html="stylizeName(name)">Full Name</span>
-  <span class="positions">
-    <span webc:for="(position) of positions" @text="position">position</span>
-  </span>
+---
+import Icon from "./Icon.astro";
+
+const { name, positions, phone, email, website, github, code} = Astro.props.details;
+
+const names = name.split(' ');
+const first = names.slice(0, names.length - 1).join(' ') + ' ';
+const last = names.slice(names.length - 1);
+
+const extras = {phone, email, website, github, code};
+---
+<header class="main-header">
+  <span class="name">{first}<span>{last}</span></span>
+  <span class="positions">{positions.map((p: String) => <span>{p}</span>)}</span>
   <span class="extras">
-    <span webc:if="phone"
-      ><icon @icon="phone"></icon><span @text="phone">phone</span></span
-    >
-    <span webc:if="email"
-      ><icon @icon="email"></icon><span @text="email">email</span></span
-    >
-    <span webc:if="website"
-      ><icon @icon="website"></icon><span @text="website">website</span></span
-    >
-    <span webc:if="github"
-      ><icon @icon="github"></icon><span @text="github">github</span></span
-    >
-    <span webc:if="code"
-      ><icon @icon="code"></icon><span @text="code">code</span></span
-    >
+    {Object.entries(extras).map(([k, v]: [String, String]) => (
+      v && (
+        <span>
+          <Icon icon={k} /><span>{v}</span>
+        </span>
+      )
+    ))}
   </span>
 </header>
 
@@ -69,6 +70,7 @@
 
   .extras > span {
     display: flex;
+    align-items: center;
     gap: calc(var(--headerExtrasGap) / 2);
   }
 
