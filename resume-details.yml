@@ -1,12 +1,13 @@
-name: First M. Last
-positions:
-  - Orporis Ipsum Facere
-  - Illum pariatur
-phone: (123) 456-7890
-email: email@example.com
-website: example.com
-github: github.com/username
-code: ""
+header:
+  name: First M. Last
+  positions:
+    - Orporis Ipsum Facere
+    - Illum pariatur
+  phone: (123) 456-7890
+  email: email@example.com
+  website: example.com
+  github: github.com/username
+  code: ""
 sections:
   - title: Technologies
     type: 2-col
