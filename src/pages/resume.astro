@@ -1,4 +1,5 @@
 ---
+import Base from "../components/Base.astro";
 import Header from "../components/Header.astro";
 import Section from "../components/Section.astro";
 
@@ -8,21 +9,7 @@ import {
 } from "../../resume-details.yml";
 ---
 
-<html lang="en">
-  <head>
-    <title>Awesome CV Astro</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-  </head>
-  <body>
-    <Header details={headerDetails} />
-    {sections.map((s: SectionDetails) => <Section details={s} />)}
-  </body>
-</html>
-
-<style>
-  @import url("../style/variables.css");
-  @import url("../style/fonts.css");
-  @import url("../style/global.css");
-</style>
+<Base>
+  <Header details={headerDetails} />
+  {sections.map((s: SectionDetails) => <Section details={s} />)}
+</Base>
