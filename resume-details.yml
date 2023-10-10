@@ -33,27 +33,6 @@ sections:
           - Inventore
           - Voluptas
           - Ratione
-  - title: Volunteering
-    items:
-      - organization: Nam quam
-        position: Accusantium sit eum
-        location: Nemo, iure dolores
-        dates: Jan 2020 - Present
-        items:
-          - Dignissimos excepturi nesciunt officia non non dolores
-          - Voluptas eveniet iure recusandae quod voluptas repellat nemo
-          - Tempora incidunt sed itaque sapiente autem voluptatem
-  - title: Projects
-    items:
-      - organization: Minus Dignissimos Sapiente
-        location: Nisi, delectus
-        dates: Oct 2018 - Jan 2020
-        position: Eveniet Corrupti
-        items:
-          - Ut deleniti voluptatibus occaecati at id suscipit et voluptas
-          - At nihil est earum ut sed amet officiis
-          - Aut nam vel est et cupiditate ipsa sed
-          - Quos in odit impedit porro et architecto
   - title: Experience
     items:
       - organization: Fugit Et Est
@@ -83,3 +62,24 @@ sections:
           - Culpa impedit quibusdam sed non sed doloremque
           - Ut atque perspiciatis rerum laudantium id recusandae omnis
           - In aut voluptatem ipsum voluptatem qui numquam sint perferendis
+  - title: Projects
+    items:
+      - organization: Minus Dignissimos Sapiente
+        location: Nisi, delectus
+        dates: Oct 2018 - Jan 2020
+        position: Eveniet Corrupti
+        items:
+          - Ut deleniti voluptatibus occaecati at id suscipit et voluptas
+          - At nihil est earum ut sed amet officiis
+          - Aut nam vel est et cupiditate ipsa sed
+          - Quos in odit impedit porro et architecto
+  - title: Volunteering
+    items:
+      - organization: Nam quam
+        position: Accusantium sit eum
+        location: Nemo, iure dolores
+        dates: Jan 2020 - Present
+        items:
+          - Dignissimos excepturi nesciunt officia non non dolores
+          - Voluptas eveniet iure recusandae quod voluptas repellat nemo
+          - Tempora incidunt sed itaque sapiente autem voluptatem
