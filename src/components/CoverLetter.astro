@@ -1,0 +1,20 @@
+---
+import Base from "./Base.astro";
+import Header from "./Header.astro";
+
+const now = new Date().toLocaleDateString("en-us", {
+  weekday: "long",
+  year: "numeric",
+  month: "short",
+  day: "numeric",
+});
+
+const {details: {header: headerDetails}, addressee} = Astro.props;
+---
+
+<Base>
+  <Header details={headerDetails} />
+  <div>Dear {addressee}</div>
+  <slot />
+</Base>
+
