@@ -8,6 +8,7 @@ header:
   website: example.com
   github: github.com/username
   code: ""
+
 sections:
   - title: Technologies
     type: 2-col
@@ -33,6 +34,7 @@ sections:
           - Inventore
           - Voluptas
           - Ratione
+
   - title: Experience
     items:
       - organization: Fugit Et Est
@@ -44,6 +46,7 @@ sections:
           - Culpa impedit quibusdam sed non sed doloremque
           - Ut atque perspiciatis rerum laudantium id recusandae omnis
           - In aut voluptatem ipsum voluptatem qui numquam sint perferendis
+
       - organization: Laudantium Id Recusandae
         location: Tempore, maxime
         position: Ducimus Unde Incidunt
@@ -53,6 +56,7 @@ sections:
           - Culpa impedit quibusdam sed non sed doloremque
           - Ut atque perspiciatis rerum laudantium id recusandae omnis
           - In aut voluptatem ipsum voluptatem qui numquam sint perferendis
+
       - organization: Quisquam Sit Iure
         location: Eius, Reprehenderit
         position: Assumenda Asperiores
@@ -62,6 +66,7 @@ sections:
           - Culpa impedit quibusdam sed non sed doloremque
           - Ut atque perspiciatis rerum laudantium id recusandae omnis
           - In aut voluptatem ipsum voluptatem qui numquam sint perferendis
+
   - title: Projects
     items:
       - organization: Minus Dignissimos Sapiente
@@ -73,13 +78,3 @@ sections:
           - At nihil est earum ut sed amet officiis
           - Aut nam vel est et cupiditate ipsa sed
           - Quos in odit impedit porro et architecto
-  - title: Volunteering
-    items:
-      - organization: Nam quam
-        position: Accusantium sit eum
-        location: Nemo, iure dolores
-        dates: Jan 2020 - Present
-        items:
-          - Dignissimos excepturi nesciunt officia non non dolores
-          - Voluptas eveniet iure recusandae quod voluptas repellat nemo
-          - Tempora incidunt sed itaque sapiente autem voluptatem
