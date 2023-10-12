@@ -48,8 +48,8 @@ sections:
           - In aut voluptatem ipsum voluptatem qui numquam sint perferendis
 
       - organization: Laudantium Id Recusandae
-        location: Tempore, maxime
         position: Ducimus Unde Incidunt
+        location: Tempore, maxime
         dates: Aug 2012 - May 2014
         items:
           - Repudiandae quos distinctio velit adipisci sapiente
@@ -58,8 +58,8 @@ sections:
           - In aut voluptatem ipsum voluptatem qui numquam sint perferendis
 
       - organization: Quisquam Sit Iure
-        location: Eius, Reprehenderit
         position: Assumenda Asperiores
+        location: Eius, Reprehenderit
         dates: Jun 2008 - July 2012
         items:
           - Repudiandae quos distinctio velit adipisci sapiente
@@ -70,9 +70,9 @@ sections:
   - title: Projects
     items:
       - organization: Minus Dignissimos Sapiente
+        position: Eveniet Corrupti
         location: Nisi, delectus
         dates: Oct 2018 - Jan 2020
-        position: Eveniet Corrupti
         items:
           - Ut deleniti voluptatibus occaecati at id suscipit et voluptas
           - At nihil est earum ut sed amet officiis
