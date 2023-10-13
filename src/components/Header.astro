@@ -1,25 +1,38 @@
 ---
 import Icon from "./Icon.astro";
 
-const { name, positions, phone, email, website, github, code} = Astro.props.details;
+interface Link {
+  text: string;
+  href: string;
+}
 
-const names = name.split(' ');
-const first = names.slice(0, names.length - 1).join(' ') + ' ';
+const { name, positions, links } = Astro.props.details;
+
+const names = name.split(" ");
+const first = names.slice(0, names.length - 1).join(" ") + " ";
 const last = names.slice(names.length - 1);
-
-const extras = {phone, email, website, github, code};
 ---
+
 <header class="main-header">
   <span class="name">{first}<span>{last}</span></span>
-  <span class="positions">{positions.map((p: String) => <span>{p}</span>)}</span>
+  <span class="positions">{positions.map((p: String) => <span>{p}</span>)}</span
+  >
   <span class="extras">
-    {Object.entries(extras).map(([k, v]: [String, String]) => (
-      v && (
-        <span>
-          <Icon icon={k} /><span>{v}</span>
-        </span>
+    {
+      Object.entries(links).map(
+        ([icon, { text, href }]) =>
+          text &&
+          href && (
+            <span>
+              <>
+              <span class="icon">
+                <Icon icon={icon} /></span>
+                <a href={href}>{text}</a>
+              </>
+            </span>
+          )
       )
-    ))}
+    }
   </span>
 </header>
 
@@ -78,5 +91,16 @@ const extras = {phone, email, website, github, code};
     content: "|";
     margin-left: calc(var(--headerExtrasGap) / 2);
     margin-right: calc(var(--headerExtrasGap) / 4);
+  }
+
+  .icon {
+    display: flex;
+    align-items: center;
+    width: 13px;
+    height: 13px;
+
+    svg {
+      width: 100%;
+    }
   }
 </style>

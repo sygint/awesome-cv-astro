@@ -3,11 +3,25 @@ header:
   positions:
     - Software Engineer
     - Full Stack Engineer
-  phone: (123) 456-7890
-  email: email@example.com
-  website: example.com
-  github: github.com/username
-  code: ""
+  links:
+    phone:
+      text: (123) 456-7890
+      href: tel:1234567890
+    email:
+      text: email@example.com
+      href: mailto:email@example.com
+    website:
+      text: example.com
+      href: https://example.com
+    github:
+      text: username
+      href: https://github.com/username
+    code:
+      text: ""
+      href: ""
+    linkedIn:
+      text: username
+      href: https://linkedin.com/username
 
 sections:
   - title: Technologies
