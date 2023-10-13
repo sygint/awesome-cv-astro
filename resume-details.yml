@@ -97,7 +97,6 @@ sections:
   - title: Projects
     items:
       - organization: Minus Dignissimos Sapiente
-        position: Eveniet Corrupti
         technologies:
           - Aut
           - Nam
@@ -107,8 +106,6 @@ sections:
           - Cupiditate
           - Ipsa
           - Sed
-        location: Nisi, delectus
-        dates: Oct 2018 - Jan 2020
         items:
           - Ut deleniti voluptatibus occaecati at id suscipit et voluptas
           - At nihil est earum ut sed amet officiis

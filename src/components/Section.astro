@@ -1,5 +1,5 @@
 ---
-import Items from "./Items.astro";
+import SubSection from "./SubSection.astro";
 
 const { title, type, items } = Astro.props.details;
 ---
@@ -7,7 +7,7 @@ const { title, type, items } = Astro.props.details;
 <section>
   <h1><span>{title.slice(0, 3)}</span>{title.slice(3)}</h1>
   <div class="section-body">
-    <Items items={items} type={type} />
+    <SubSection items={items} type={type} />
   </div>
 </section>
 

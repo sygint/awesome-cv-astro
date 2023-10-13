@@ -1,7 +1,20 @@
 ---
+interface TwoColSubSection {
+  title: string;
+  items: string[];
+}
+
+interface DetailedSubSection {
+  organization: string;
+  location: string;
+  position: string;
+  dates: string;
+  items: string[];
+}
+
 const { type, items } = Astro.props;
 
-function join(items, delimiter) {
+function join(items: string[], delimiter: string) {
   return (
     items.slice(0, items.length - 1).join(`${delimiter} `) +
     `${delimiter} and ` +
@@ -13,36 +26,45 @@ function join(items, delimiter) {
 <>
   {
     type === "2-col"
-      ? items.map(({ title, items }) => (
+      ? items.map(({ title, items }: TwoColSubSection) => (
           <div class="sub-section two-col">
             <div class="sub-section-title">{title}</div>
             <div class="sub-section-items">{join(items, ",")}</div>
           </div>
         ))
-      : items.map(({ organization, location, position, dates, items }) => (
-          <div>
-            <div class="sub-section-header">
-              <span class="organization">{organization}</span>
-              <span class="location">{location}</span>
-            </div>
-            { position || dates && (
+      : items.map(
+          ({
+            organization,
+            location,
+            position,
+            dates,
+            items,
+          }: DetailedSubSection) => (
+            <div class="sub-section">
               <div class="sub-section-header">
-                <span class="position">{position}</span>
-                <span class="dates">{dates}</span>
+                <span class="organization">{organization}</span>
+                {location && <span class="location">{location}</span>}
               </div>
-            )}
-            <ul class="sub-section-items">
-              {items.map((item) => (
-                <li>{item}</li>
-              ))}
-            </ul>
-          </div>
-        ))
+              {position ||
+                (dates && (
+                  <div class="sub-section-header">
+                    <span class="position">{position}</span>
+                    <span class="dates">{dates}</span>
+                  </div>
+                ))}
+              <ul class="sub-section-items">
+                {items.map((item) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            </div>
+          )
+        )
   }
 </>
 
 <style>
-  .sub-section.two-col  {
+  .sub-section.two-col {
     display: flex;
     flex-direction: row;
     gap: 25pt;
