@@ -1,8 +1,8 @@
 header:
   name: First M. Last
   positions:
-    - Orporis Ipsum Facere
-    - Illum pariatur
+    - Software Engineer
+    - Full Stack Engineer
   phone: (123) 456-7890
   email: email@example.com
   website: example.com
@@ -39,6 +39,15 @@ sections:
     items:
       - organization: Fugit Et Est
         position: Beatae mollitia cupiditate
+        technologies:
+          - Ut
+          - Atque
+          - Perspiciatis
+          - Rerum
+          - Laudantium
+          - Id
+          - Recusandae
+          - Omnis
         location: Quam, laudantium
         dates: Nov 2014 - Oct 2018
         items:
@@ -49,6 +58,16 @@ sections:
 
       - organization: Laudantium Id Recusandae
         position: Ducimus Unde Incidunt
+        technologies:
+          - In
+          - Aut
+          - Voluptatem
+          - Ipsum
+          - Voluptatem
+          - Qui
+          - Numquam
+          - Sint
+          - Perferendis
         location: Tempore, maxime
         dates: Aug 2012 - May 2014
         items:
@@ -59,6 +78,14 @@ sections:
 
       - organization: Quisquam Sit Iure
         position: Assumenda Asperiores
+        technologies:
+          - Culpa
+          - Impedit
+          - Quibusdam
+          - Sed
+          - Non
+          - Sed
+          - Doloremque
         location: Eius, Reprehenderit
         dates: Jun 2008 - July 2012
         items:
@@ -71,6 +98,15 @@ sections:
     items:
       - organization: Minus Dignissimos Sapiente
         position: Eveniet Corrupti
+        technologies:
+          - Aut
+          - Nam
+          - Vel
+          - Est
+          - Et
+          - Cupiditate
+          - Ipsa
+          - Sed
         location: Nisi, delectus
         dates: Oct 2018 - Jan 2020
         items:
