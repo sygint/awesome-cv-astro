@@ -1,20 +1,23 @@
+import { parse } from "node:path";
+
 import { fromPath } from "pdf2pic";
 
-const options = {
-  quality: 100,
-  density: 100,
-  saveFilename: "preview",
-  savePath: "./build",
-  format: "png",
-  width: 827,
-  height: 1169,
-};
+export default async (input: string, output: string) => {
+  const { dir, base } = parse(output);
 
-export default async (path: string) => {
-  const convert = fromPath(path, options);
+  console.log({ dir, base });
+  const convert = fromPath(input, {
+    quality: 100,
+    density: 100,
+    saveFilename: base,
+    savePath: dir,
+    format: "png",
+    width: 827,
+    height: 1169,
+  });
   const pageToConvertAsImage = 1;
 
   await convert(pageToConvertAsImage, { responseType: "image" });
 
-  console.log("Page 1 is now converted as image");
+  console.log(`${input} -> ${output}.png`);
 };

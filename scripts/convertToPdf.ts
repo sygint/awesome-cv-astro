@@ -1,6 +1,6 @@
 import puppeteer from "puppeteer";
 
-export default async (port: number, output: string) => {
+export default async (port: number, input: string, output: string) => {
   // Create a browser instance
   // const browser = await puppeteer.launch({ headless: "new" });
   const browser = await puppeteer.launch({
@@ -14,7 +14,7 @@ export default async (port: number, output: string) => {
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
   );
 
-  const url = `http://localhost:${port}/resume`;
+  const url = `http://localhost:${port}${input}`;
   await page.goto(url, { waitUntil: "networkidle0" });
 
   // To reflect CSS used for screens instead of print

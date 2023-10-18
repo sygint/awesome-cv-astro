@@ -4,9 +4,9 @@ A fork of [awesome-cv-react](https://github.com/sygint/awesome-cv-react) to [Ele
 
 ## Preview
 
-You can see [PDF](build/resume.pdf)
-
-[![Résumé](build/preview.1.png)](build/resume.pdf)
+| Resume | Cover Letter |
+|:---:|:---:|
+| [![Resume](build/preview.resume.1.png)](build/resume.pdf)  | [![Cover Letter](build/preview.cover-letter.sample.1.png)](build/resume.pdf) |
 
 # Getting Started
 
