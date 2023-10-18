@@ -6,7 +6,7 @@ interface Link {
   href: string;
 }
 
-const { name, positions, links } = Astro.props.details;
+const { name, positions, extras } = Astro.props.details;
 
 const names = name.split(" ");
 const first = names.slice(0, names.length - 1).join(" ") + " ";
@@ -19,7 +19,7 @@ const last = names.slice(names.length - 1);
   >
   <span class="extras">
     {
-      Object.entries(links).map(
+      Object.entries(extras).map(
         ([icon, { text, href }]) =>
           text &&
           href && (

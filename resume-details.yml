@@ -3,7 +3,7 @@ header:
   positions:
     - Software Engineer
     - Full Stack Engineer
-  links:
+  extras:
     phone:
       text: (123) 456-7890
       href: tel:1234567890
