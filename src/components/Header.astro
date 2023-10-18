@@ -21,13 +21,12 @@ const last = names.slice(names.length - 1);
     {
       Object.entries(extras).map(
         ([icon, { text, href }]) =>
-          text &&
-          href && (
+          text && (
             <span>
               <>
               <span class="icon">
                 <Icon icon={icon} /></span>
-                <a href={href}>{text}</a>
+                {href ? <a href={href}>{text}</a> : text}
               </>
             </span>
           )
@@ -78,6 +77,8 @@ const last = names.slice(names.length - 1);
 
   .extras {
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     flex-direction: row;
   }
 
@@ -85,6 +86,8 @@ const last = names.slice(names.length - 1);
     display: flex;
     align-items: center;
     gap: calc(var(--headerExtrasGap) / 2);
+
+    white-space: nowrap;
   }
 
   .extras > span:not(:first-child):before {

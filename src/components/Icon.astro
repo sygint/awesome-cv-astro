@@ -1,4 +1,5 @@
 ---
+import Globe from "../icons/Globe.astro";
 import Phone from "../icons/Phone.astro";
 import Email from "../icons/Email.astro";
 import Website from "../icons/Website.astro";
@@ -8,6 +9,7 @@ import LinkedIn from "../icons/LinkedIn.astro";
 const { icon } = Astro.props;
 ---
 
+{icon === "location" && <Globe />}
 {icon === "phone" && <Phone />}
 {icon === "email" && <Email />}
 {icon === "website" && <Website />}

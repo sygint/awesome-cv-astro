@@ -6,7 +6,7 @@ A fork of [awesome-cv-react](https://github.com/sygint/awesome-cv-react) to [Ele
 
 You can see [PDF](build/resume.pdf)
 
-[![Résumé](build/resume_page_1.png)](build/resume.pdf)
+[![Résumé](build/preview.1.png)](build/resume.pdf)
 
 # Getting Started
 

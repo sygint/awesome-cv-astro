@@ -4,6 +4,8 @@ header:
     - Software Engineer
     - Full Stack Engineer
   extras:
+    location:
+      text: Praesentium, Corrupti, Et
     phone:
       text: (123) 456-7890
       href: tel:1234567890
