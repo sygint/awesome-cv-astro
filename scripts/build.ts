@@ -41,7 +41,7 @@ import convertToPng from "./convertToPng";
 
       await convertToPng(
         `./build/cover-letter.${letter}.pdf`,
-        `./build/preview.cover-letter.${letter}`
+        `./build/cover-letter.${letter}`
       );
       console.log(`Converting ${letter} cover letter to PNG...`);
     }
