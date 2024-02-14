@@ -110,6 +110,24 @@ sections:
           - Ut atque perspiciatis rerum laudantium id recusandae omnis
           - In aut voluptatem ipsum voluptatem qui numquam sint perferendis
 
+      - organization: Quisquam Sit Iure
+        position: Assumenda Asperiores
+        technologies:
+          - Culpa
+          - Impedit
+          - Quibusdam
+          - Sed
+          - Non
+          - Sed
+          - Doloremque
+        location: Eius, Reprehenderit
+        dates: Apr 2004 - Jun 2008
+        items:
+          - Repudiandae quos distinctio velit adipisci sapiente
+          - Culpa impedit quibusdam sed non sed doloremque
+          - Ut atque perspiciatis rerum laudantium id recusandae omnis
+          - In aut voluptatem ipsum voluptatem qui numquam sint perferendis
+
   - title: Projects
     items:
       - organization: Minus Dignissimos Sapiente
