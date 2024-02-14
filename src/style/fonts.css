@@ -161,3 +161,43 @@
   font-style: italic;
   font-weight: 900;
 }
+
+/* Atkinson Hyperlegible Regular */
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: url("../fonts/atkinson/Atkinson-Hyperlegible-Regular-102a.woff2")
+      format("woff2"),
+    url("../fonts/atkinson/Atkinson-Hyperlegible-Regular-102.woff")
+      format("woff");
+  font-style: normal;
+  font-weight: 400;
+}
+/* Atkinson Hyperlegible Bold */
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: url("../fonts/atkinson/Atkinson-Hyperlegible-Bold-102a.woff2")
+      format("woff2"),
+    url("../fonts/atkinson/Atkinson-Hyperlegible-Bold-102.woff") format("woff");
+  font-style: normal;
+  font-weight: 700;
+}
+/* Atkinson Hyperlegible Italic */
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: url("../fonts/atkinson/Atkinson-Hyperlegible-Italic-102a.woff2")
+      format("woff2"),
+    url("../fonts/atkinson/Atkinson-Hyperlegible-Italic-102.woff")
+      format("woff");
+  font-style: italic;
+  font-weight: 400;
+}
+/* Atkinson Hyperlegible Bold Italic */
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: url("../fonts/atkinson/Atkinson-Hyperlegible-BoldItalic-102a.woff2")
+      format("woff2"),
+    url("../fonts/atkinson/Atkinson-Hyperlegible-BoldItalic-102.woff")
+      format("woff");
+  font-style: italic;
+  font-weight: 700;
+}

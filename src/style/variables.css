@@ -27,6 +27,7 @@
 
   --SourceSansPro: "Source Sans Pro";
   --Roboto: "Roboto";
+  --AtkinsonHyperlegible: "Atkinson Hyperlegible";
 
   --fontWeightLight: 100;
   --fontWeightBold: 900;
@@ -36,17 +37,17 @@
   --colorHighlight: var(--awesomeRed);
   --colorText: var(--grayDark);
   --colorLightText: var(--gray);
-  --fontFamily: var(--SourceSansPro);
 
   /* Page */
 
   --pageMargins: 0.8cm 1.4cm 1.8cm;
-  --pageFontFamily: var(--SourceSansPro);
+  --pageFontFamily: var(--AtkinsonHyperlegible);
   --pageFontSize: 10pt;
 
   /* Header */
 
-  --headerFontFamily: var(--Roboto);
+  --headerNameFontFamily: var(--Roboto);
+  --headerSecondaryFontFamily: var(--AtkinsonHyperlegible);
   --headerFontSize: 8pt;
   --headerNameFontSize: 32pt;
   --headerPositionsFontSize: 7.6pt;
@@ -55,7 +56,7 @@
 
   /* Section */
 
-  --sectionFontFamily: var(--SourceSansPro);
+  --sectionFontFamily: var(--AtkinsonHyperlegible);
   --sectionfontSize: 12pt;
   --sectionHeaderFontSize: 16pt;
   --sectionHeaderFontWeight: var(--fontWeightBold);
