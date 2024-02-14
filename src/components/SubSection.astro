@@ -28,7 +28,7 @@ function join(items: string[], delimiter: string) {
     type === "2-col"
       ? items.map(({ title, items }: TwoColSubSection) => (
           <div class="sub-section two-col">
-            <div class="sub-section-title">{title}</div>
+            <div class="sub-section-title">{title}:</div>
             <div class="sub-section-items">{join(items, ",")}</div>
           </div>
         ))
