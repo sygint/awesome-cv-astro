@@ -83,32 +83,40 @@
 /* SourceSansPro Regular */
 @font-face {
   font-family: "Source Sans Pro";
-  src: url("../fonts/source-sans-pro/sourcesanspro-regular-webfont.woff2") format("woff2"),
-    url("../fonts/source-sans-pro/sourcesanspro-regular-webfont.woff") format("woff");
+  src: url("../fonts/source-sans-pro/sourcesanspro-regular-webfont.woff2")
+      format("woff2"),
+    url("../fonts/source-sans-pro/sourcesanspro-regular-webfont.woff")
+      format("woff");
   font-style: normal;
   font-weight: normal;
 }
 /* SourceSansPro Light */
 @font-face {
   font-family: "Source Sans Pro";
-  src: url("../fonts/source-sans-pro/sourcesanspro-light-webfont.woff2") format("woff2"),
-    url("../fonts/source-sans-pro/sourcesanspro-light-webfont.woff") format("woff");
+  src: url("../fonts/source-sans-pro/sourcesanspro-light-webfont.woff2")
+      format("woff2"),
+    url("../fonts/source-sans-pro/sourcesanspro-light-webfont.woff")
+      format("woff");
   font-style: normal;
   font-weight: 300;
 }
 /* SourceSansPro Semibold */
 @font-face {
   font-family: "Source Sans Pro";
-  src: url("../fonts/source-sans-pro/sourcesanspro-semibold-webfont.woff2") format("woff2"),
-    url("../fonts/source-sans-pro/sourcesanspro-semibold-webfont.woff") format("woff");
+  src: url("../fonts/source-sans-pro/sourcesanspro-semibold-webfont.woff2")
+      format("woff2"),
+    url("../fonts/source-sans-pro/sourcesanspro-semibold-webfont.woff")
+      format("woff");
   font-style: normal;
   font-weight: 600;
 }
 /* SourceSansPro Bold */
 @font-face {
   font-family: "Source Sans Pro";
-  src: url("../fonts/source-sans-pro/sourcesanspro-bold-webfont.woff2") format("woff2"),
-    url("../fonts/source-sans-pro/sourcesanspro-bold-webfont.woff") format("woff");
+  src: url("../fonts/source-sans-pro/sourcesanspro-bold-webfont.woff2")
+      format("woff2"),
+    url("../fonts/source-sans-pro/sourcesanspro-bold-webfont.woff")
+      format("woff");
   font-style: normal;
   font-weight: 900;
 }
@@ -116,32 +124,40 @@
 /* SourceSansPro Normal Italic */
 @font-face {
   font-family: "Source Sans Pro";
-  src: url("../fonts/source-sans-pro/sourcesanspro-italic-webfont.woff2") format("woff2"),
-    url("../fonts/source-sans-pro/sourcesanspro-italic-webfont.woff") format("woff");
+  src: url("../fonts/source-sans-pro/sourcesanspro-italic-webfont.woff2")
+      format("woff2"),
+    url("../fonts/source-sans-pro/sourcesanspro-italic-webfont.woff")
+      format("woff");
   font-style: italic;
   font-weight: normal;
 }
 /* SourceSansPro Light Italic */
 @font-face {
   font-family: "Source Sans Pro";
-  src: url("../fonts/source-sans-pro/sourcesanspro-lightitalic-webfont.woff2") format("woff2"),
-    url("../fonts/source-sans-pro/sourcesanspro-lightitalic-webfont.woff") format("woff");
+  src: url("../fonts/source-sans-pro/sourcesanspro-lightitalic-webfont.woff2")
+      format("woff2"),
+    url("../fonts/source-sans-pro/sourcesanspro-lightitalic-webfont.woff")
+      format("woff");
   font-style: italic;
   font-weight: 300;
 }
 /* SourceSansPro Semibold Italic */
 @font-face {
   font-family: "Source Sans Pro";
-  src: url("../fonts/source-sans-pro/sourcesanspro-semibolditalic-webfont.woff2") format("woff2"),
-    url("../fonts/source-sans-pro/sourcesanspro-semibolditalic-webfont.woff") format("woff");
+  src: url("../fonts/source-sans-pro/sourcesanspro-semibolditalic-webfont.woff2")
+      format("woff2"),
+    url("../fonts/source-sans-pro/sourcesanspro-semibolditalic-webfont.woff")
+      format("woff");
   font-style: italic;
   font-weight: 600;
 }
 /* SourceSansPro Bold Italic */
 @font-face {
   font-family: "Source Sans Pro";
-  src: url("../fonts/source-sans-pro/sourcesanspro-bolditalic-webfont.woff2") format("woff2"),
-    url("../fonts/source-sans-pro/sourcesanspro-bolditalic-webfont.woff") format("woff");
+  src: url("../fonts/source-sans-pro/sourcesanspro-bolditalic-webfont.woff2")
+      format("woff2"),
+    url("../fonts/source-sans-pro/sourcesanspro-bolditalic-webfont.woff")
+      format("woff");
   font-style: italic;
   font-weight: 900;
 }
