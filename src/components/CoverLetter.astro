@@ -2,19 +2,49 @@
 import Base from "./Base.astro";
 import Header from "./Header.astro";
 
+const {
+  position,
+  greeting,
+  signOff,
+  details: { header: headerDetails },
+} = Astro.props;
+
+const { name } = headerDetails;
+
 const now = new Date().toLocaleDateString("en-us", {
   weekday: "long",
   year: "numeric",
-  month: "short",
+  month: "long",
   day: "numeric",
 });
-
-const {details: {header: headerDetails}, addressee} = Astro.props;
 ---
 
 <Base>
   <Header details={headerDetails} />
-  <div>Dear {addressee}</div>
+  <div class="cover-letter-header">
+    <div class="position">For position of {position}</div>
+    <div>{now}</div>
+  </div>
+  <div>{greeting}</div>
   <slot />
+  <div>{signOff ?? 'Sincerely,'}</div>
+  <div class="name">{name}</div>
 </Base>
 
+<style>
+  .cover-letter-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 2rem 0 1rem 0;
+  }
+
+  .position {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  .name {
+    font-weight: bold;
+  }
+</style>
