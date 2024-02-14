@@ -1,8 +1,11 @@
 html {
-  background: #fff;
+  background: #ccc;
 }
 
 body {
+  background: #fff;
+  max-width: 21cm;
+  margin: 0 auto;
   padding: var(--pageMargins);
   color: var(--colorLightText);
   font-family: var(--pageFontFamily);
