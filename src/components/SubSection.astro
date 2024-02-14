@@ -7,6 +7,7 @@ interface TwoColSubSection {
 interface DetailedSubSection {
   organization: string;
   location: string;
+  href: string;
   position: string;
   dates: string;
   items: string[];
@@ -36,6 +37,7 @@ function join(items: string[], delimiter: string) {
           ({
             organization,
             location,
+            href,
             position,
             dates,
             items,
@@ -44,6 +46,11 @@ function join(items: string[], delimiter: string) {
               <div class="sub-section-header">
                 <span class="organization">{organization}</span>
                 {location && <span class="location">{location}</span>}
+                {href && (
+                  <a href={href} class="href">
+                    {href}
+                  </a>
+                )}
               </div>
               {(position || dates) && (
                 <div class="sub-section-header">
