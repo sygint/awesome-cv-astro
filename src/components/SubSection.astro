@@ -51,11 +51,13 @@ function join(items: string[], delimiter: string) {
                   <span class="dates">{dates}</span>
                 </div>
               )}
-              <ul class="sub-section-items">
-                {items.map((item) => (
-                  <li>{item}</li>
-                ))}
-              </ul>
+              {items && (
+                <ul class="sub-section-items">
+                  {items.map((item) => (
+                    <li>{item}</li>
+                  ))}
+                </ul>
+              )}
             </div>
           )
         )
