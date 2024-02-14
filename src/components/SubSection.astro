@@ -45,13 +45,12 @@ function join(items: string[], delimiter: string) {
                 <span class="organization">{organization}</span>
                 {location && <span class="location">{location}</span>}
               </div>
-              {position ||
-                (dates && (
-                  <div class="sub-section-header">
-                    <span class="position">{position}</span>
-                    <span class="dates">{dates}</span>
-                  </div>
-                ))}
+              {(position || dates) && (
+                <div class="sub-section-header">
+                  <span class="position">{position}</span>
+                  <span class="dates">{dates}</span>
+                </div>
+              )}
               <ul class="sub-section-items">
                 {items.map((item) => (
                   <li>{item}</li>
