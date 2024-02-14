@@ -3,8 +3,10 @@ html {
 }
 
 body {
+  box-sizing: border-box;
   background: #fff;
   max-width: 21cm;
+  min-height: 29.7cm;
   margin: 0 auto;
   padding: var(--pageMargins);
   color: var(--colorLightText);
