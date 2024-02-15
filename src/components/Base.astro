@@ -1,3 +1,7 @@
+---
+const { compact } = Astro.props;
+---
+
 <html lang="en">
   <head>
     <title>Awesome CV Astro</title>
@@ -5,7 +9,7 @@
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
   </head>
-  <body>
+  <body class:list={{ compact }}>
     <slot />
   </body>
 </html>

@@ -72,16 +72,28 @@ function join(items: string[], delimiter: string) {
 </>
 
 <style>
-  .sub-section.two-col {
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-    gap: 25pt;
-    margin-bottom: 0.15cm;
+  .sub-section {
+    margin-bottom: var(--subSectionMarginBottom);
+
+    &.two-col {
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+      gap: 25pt;
+      margin-bottom: 0.15cm;
+    }
+
+    &:last-child {
+      margin-bottom: var(--subSectionMarginBottomLast);
+    }
+  }
+
+  .sub-section.two-col:last-child {
+    margin-bottom: var(--subSectionTwoColLastMarginBottom);
   }
 
   .sub-section-title {
-    width: 3.75cm;
+    width: var(--subSectionTitleWidth);
 
     font-weight: var(--fontWeightBold);
     color: var(--colorText);
@@ -89,6 +101,7 @@ function join(items: string[], delimiter: string) {
 
   .sub-section-items {
     width: 100%;
+    margin: var(--subSectionItemsMargin);
     padding-left: 13px;
 
     font-size: 9pt;
@@ -97,6 +110,7 @@ function join(items: string[], delimiter: string) {
 
   ul.sub-section-items {
     box-sizing: border-box;
+    margin: var(--subSectionItemsUlMargin) 0;
   }
 
   .sub-section-header {

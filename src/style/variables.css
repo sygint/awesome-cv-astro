@@ -58,12 +58,31 @@
 
   --sectionFontFamily: var(--AtkinsonHyperlegible);
   --sectionfontSize: 12pt;
+  --sectionHeaderMargin: 13pt 0;
   --sectionHeaderFontSize: 16pt;
   --sectionHeaderFontWeight: var(--fontWeightBold);
-  --sectionMarginBottom: 0.4cm;
+  --sectionMarginBottom: 0.3cm;
+
+  /* Sub Section */
+
+  --subSectionTitleWidth: 1.25cm;
+  --subSectionSubHeader: 8pt;
+  --subSectionItemsUlMargin: 0.3cm;
+  --subSectionMarginBottom: 0.4cm;
 
   /* Experience */
 
-  --positionFontSize: 7pt;
+  --positionFontSize: 8pt;
+  --summaryFontSize: 8pt;
   --datesFontSize: 8pt;
+}
+
+.compact {
+  --sectionMarginBottom: 0.2cm;
+  --sectionHeaderMargin: 0;
+  --subSectionMarginBottom: 0.4cm;
+  --subSectionMarginBottomLast: 0;
+  --subSectionTwoColLastMarginBottom: 0;
+  --subSectionItemsMargin: 0;
+  --subSectionItemsUlMargin: 0.1cm;
 }

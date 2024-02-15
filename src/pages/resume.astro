@@ -4,12 +4,13 @@ import Header from "../components/Header.astro";
 import Section from "../components/Section.astro";
 
 import {
+  compact,
   header as headerDetails,
   sections,
 } from "../../resume-details.yml";
 ---
 
-<Base>
+<Base compact={compact}>
   <Header details={headerDetails} />
   {sections.map((s: SectionDetails) => <Section details={s} />)}
 </Base>
