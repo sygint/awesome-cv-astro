@@ -1,6 +1,6 @@
 # Awesome CV Astro
 
-A fork of [awesome-cv-react](https://github.com/sygint/awesome-cv-react) to [Eleventy](https://www.11ty.dev/) and now [Astro](https://astro.build/). This fork has easier markup and generation Astro and style via vanilla CSS. It has the same easy configuration via YAML.
+A fork of [awesome-cv-react](https://github.com/sygint/awesome-cv-react) to [Eleventy](https://www.11ty.dev/) and now [Astro](https://astro.build/). This fork has easier markup and generation via Astro and style via vanilla CSS. It has the same easy configuration via YAML.
 
 ## Preview
 
