@@ -23,4 +23,5 @@ pnpm-debug.log*
 
 # devenv
 .devenv
+.devenv.flake.nix
 .direnv
