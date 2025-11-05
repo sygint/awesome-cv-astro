@@ -25,7 +25,7 @@ export default async (inputHtmlPath: string, outputPdfPath: string) => {
     console.log(`📄 Loading ${inputHtmlPath}...`);
     
     // Get build directory for fixing absolute paths
-    const buildDir = dirname(inputHtmlPath).replace(/\/resume$/, '');
+    const buildDir = dirname(inputHtmlPath).replace(/\/resume$/, '').replace(/\/cover-letter\/[^/]+$/, '');
     
     // Intercept CSS files to fix absolute font paths
     await page.route('**/*.css', async (route) => {
