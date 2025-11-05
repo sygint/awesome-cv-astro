@@ -1,5 +1,6 @@
 import { chromium } from 'playwright';
 import { existsSync } from 'fs';
+import { dirname } from 'path';
 
 // Skip host validation on NixOS - we use nixpkgs browsers
 process.env.PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS = 'true';
@@ -25,7 +26,45 @@ export default async (inputHtmlPath: string, outputPngPath: string) => {
 
     const fileUrl = `file://${inputHtmlPath}`;
     console.log(`📄 Loading ${inputHtmlPath}...`);
+    
+    // Get build directory for fixing absolute paths
+    const buildDir = dirname(inputHtmlPath).replace(/\/resume$/, '').replace(/\/cover-letter\/[^/]+$/, '');
+    
+    // Intercept CSS files to fix absolute font paths
+    await page.route('**/*.css', async (route) => {
+      const url = route.request().url();
+      // Convert file:// URL to local path
+      if (url.startsWith('file://')) {
+        const { readFileSync } = await import('fs');
+        const localPath = url.replace('file://', '');
+        try {
+          let css = readFileSync(localPath, 'utf8');
+          // Fix absolute font paths in CSS
+          css = css.replace(/url\((["']?)\/([^)"']+)(["']?)\)/g, `url($1file://${buildDir}/$2$3)`);
+          await route.fulfill({ body: css, contentType: 'text/css' });
+        } catch (error) {
+          await route.continue();
+        }
+      } else {
+        await route.continue();
+      }
+    });
+    
     await page.goto(fileUrl, { waitUntil: 'networkidle' });
+    
+    // Fix absolute asset paths by rewriting CSS links
+    await page.evaluate((buildPath) => {
+      document.querySelectorAll('link[rel="stylesheet"]').forEach(linkEl => {
+        const link = linkEl as HTMLLinkElement;
+        const href = link.getAttribute('href');
+        if (href && href.startsWith('/')) {
+          link.href = `file://${buildPath}${href}`;
+        }
+      });
+    }, buildDir);
+    
+    // Wait for stylesheets to reload
+    await page.waitForTimeout(100);
     
     // Skip font loading check that causes issues with Astro's build output
     // Just give time for rendering
