@@ -14,8 +14,7 @@
   },
   "devDependencies": {
     "@rollup/plugin-yaml": "^4.1.2",
-    "pdf2pic": "^3.0.3",
-    "puppeteer": "^21.3.8",
+    "playwright": "1.54.1",
     "tsx": "^3.13.0",
     "yaml": "^2.3.4"
   }
