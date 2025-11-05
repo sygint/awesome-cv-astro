@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "astro build && tsx ./scripts/build.ts",
     "build-pdf": "tsx ./scripts/build.ts",
     "preview": "astro preview"
   },

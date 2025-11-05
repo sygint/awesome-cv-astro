@@ -10,7 +10,45 @@ A fork of [awesome-cv-react](https://github.com/sygint/awesome-cv-react) to [Ele
 
 # Getting Started
 
-This project is powered by [Astro](https://astro.build/).
+This project is powered by [Astro](https://astro.build/) and uses [Playwright](https://playwright.dev/) for PDF and PNG generation.
+
+## Prerequisites
+
+- Node.js 20 or later
+- pnpm (recommended) or npm
+
+### NixOS / devenv Setup
+
+This project includes a `devenv.nix` configuration for NixOS users. The devenv setup:
+
+- Provides Node.js 20 and pnpm
+- Configures Playwright to use pre-patched browsers from nixpkgs
+- Uses Playwright 1.54.1 (matching nixpkgs version)
+- Sets up all necessary environment variables automatically
+
+To use devenv:
+
+```bash
+# Install devenv if you haven't already
+# See: https://devenv.sh/getting-started/
+
+# Enter the development shell
+direnv allow
+
+# Or manually activate
+devenv shell
+```
+
+The devenv configuration handles all Playwright browser setup automatically - no need to run `playwright install`.
+
+### Standard Setup (non-NixOS)
+
+If you're not using NixOS/devenv:
+
+```bash
+pnpm install
+npx playwright install chromium
+```
 
 # Configuration
 
@@ -37,9 +75,9 @@ Inside of your Astro project, you'll see the following folders and files:
 ...
 ```
 
-`./dist` - Generator build output
+`./build` - Generator build output (configured in astro.config.mjs)
 
-`scripts/` - Scripts for pdf and png generation
+`scripts/` - Scripts for PDF and PNG generation using Playwright
 
 `src/` - Resume source code
 
@@ -61,8 +99,24 @@ All commands are run from the root of the project, from a terminal:
 | :------------------------- | :-------------------------------------------------------- |
 | `pnpm install`             | Installs dependencies                                     |
 | `pnpm dev` or `pnpm start` | Starts local dev server at `localhost:4321`               |
-| `pnpm build`               | Build your resume to `./dist/` and convert to PDF and PNG |
+| `pnpm build`               | Build your resume to `./build/` and convert to PDF and PNG |
+| `pnpm build-pdf`           | Generate PDF and PNG from already-built HTML              |
 | `pnpm preview`             | Preview your already built resume in the browser          |
+
+## How PDF and PNG Generation Works
+
+The `pnpm build` command:
+
+1. Runs `astro build` to generate static HTML in `./build/`
+2. Uses Playwright to load the HTML files directly from the filesystem (no server needed)
+3. Generates:
+   - PDF files from the HTML pages (with print media CSS)
+   - High-resolution PNG screenshots for previews
+   - Processes both resume and cover letter pages
+
+The conversion scripts (`convertToPdf.ts` and `convertToPng.ts`) use Playwright's Chromium browser with `file://` URLs to load HTML directly from disk, ensuring accurate rendering with proper font loading and CSS application.
+
+**Note**: On NixOS, the devenv configuration automatically uses pre-patched Playwright browsers from nixpkgs, eliminating the need for manual browser installation or patching.
 
 ## Work In Progress
 
