@@ -1,33 +1,39 @@
-import puppeteer from "puppeteer";
+import { chromium } from 'playwright';
+
+// Skip host validation on NixOS - we use nixpkgs browsers
+process.env.PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS = 'true';
 
 export default async (port: number, input: string, output: string) => {
-  // Create a browser instance
-  // const browser = await puppeteer.launch({ headless: "new" });
-  const browser = await puppeteer.launch({
-    headless: "new",
-  });
+  try {
+    console.log('🚀 Launching browser...');
+    const browser = await chromium.launch();
+    const page = await browser.newPage();
 
-  // Create a new page
-  const page = await browser.newPage();
-  await page.setViewport({ width: 595, height: 842, deviceScaleFactor: 2 });
-  await page.setUserAgent(
-    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36"
-  );
+    // Emulate print media BEFORE loading the page for correct CSS application
+    await page.emulateMedia({ media: 'print' });
 
-  const url = `http://localhost:${port}${input}`;
-  await page.goto(url, { waitUntil: "networkidle0" });
+    const url = `http://localhost:${port}${input}`;
+    console.log(`📄 Loading ${url}...`);
+    await page.goto(url, { waitUntil: 'networkidle' });
+    
+    // Wait for any web fonts to load
+    await page.evaluate(() => document.fonts.ready);
+    
+    // Give a small buffer for final rendering
+    await page.waitForTimeout(500);
 
-  // To reflect CSS used for screens instead of print
-  await page.emulateMediaType("screen");
+    console.log('📝 Generating PDF...');
+    await page.pdf({
+      path: output,
+      format: 'A4',
+      printBackground: true,
+      margin: { top: '0', right: '0', bottom: '0', left: '0' }
+    });
 
-  // Download the PDF
-  await page.pdf({
-    path: output,
-    margin: { top: "0", right: "0", bottom: "0", left: "0" },
-    printBackground: true,
-    format: "A4",
-  });
-
-  // Close the browser instance
-  await browser.close();
+    await browser.close();
+    console.log(`✅ PDF saved to ${output}`);
+  } catch (error) {
+    console.error('❌ Failed to generate PDF:', error);
+    throw error;
+  }
 };

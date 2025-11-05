@@ -22,29 +22,26 @@ import convertToPng from "./convertToPng";
 
     const letters = await readdir(coverLetterPath);
 
+    console.log('\n📄 Converting resume to PDF and PNG...');
     await convertToPdf(port, "/resume/", `./build/${formattedName}.pdf`);
-    console.log(`Converting resume to PDF...`);
+    await convertToPng(port, "/resume/", `./build/${formattedName}.resume`);
 
-    await convertToPng(
-      `./build/${formattedName}.pdf`,
-      `./build/${formattedName}.resume`
-    );
-    console.log(`Converting resume to PNG...`);
-
+    console.log('\n📝 Converting cover letters to PDF and PNG...');
     for (const letter of letters) {
+      console.log(`\n📋 Processing ${letter} cover letter...`);
       await convertToPdf(
         port,
         `/cover-letter/${letter}`,
         `./build/cover-letter.${letter}.pdf`
       );
-      console.log(`Converting ${letter} cover letter to PDF...`);
-
       await convertToPng(
-        `./build/cover-letter.${letter}.pdf`,
+        port,
+        `/cover-letter/${letter}`,
         `./build/cover-letter.${letter}`
       );
-      console.log(`Converting ${letter} cover letter to PNG...`);
     }
+
+    console.log('\n✅ All conversions completed successfully!');
   } catch (e) {
     console.log(e);
   }
