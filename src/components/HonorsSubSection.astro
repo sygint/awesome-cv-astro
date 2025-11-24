@@ -1,0 +1,68 @@
+---
+interface HonorsSubSection {
+  title: string;
+  issuer: string;
+  date?: string;
+  description?: string;
+}
+
+const { items } = Astro.props;
+---
+
+<>
+  {
+    items.map((honor: HonorsSubSection) => (
+      <div class="sub-section honors">
+        <div class="sub-section-header">
+          <span class="title">{honor.title}</span>
+          {honor.date && <span class="date">{honor.date}</span>}
+        </div>
+        
+        <div class="issuer">{honor.issuer}</div>
+        
+        {honor.description && (
+          <div class="description">{honor.description}</div>
+        )}
+      </div>
+    ))
+  }
+</>
+
+<style>
+  .sub-section.honors {
+    margin-bottom: var(--subSectionMarginBottom);
+  }
+
+  .sub-section.honors:last-child {
+    margin-bottom: var(--subSectionMarginBottomLast);
+  }
+
+  .sub-section-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .title {
+    font-weight: var(--fontWeightBold);
+    color: var(--colorText);
+    flex: 1;
+  }
+
+  .date {
+    font-size: var(--datesFontSize);
+    font-style: italic;
+  }
+
+  .issuer {
+    font-size: var(--positionFontSize);
+    color: var(--colorHighlight);
+    margin-top: 0.05cm;
+  }
+
+  .description {
+    margin-top: 0.1cm;
+    font-size: 9pt;
+    color: var(--colorLightText);
+  }
+</style>

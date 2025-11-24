@@ -101,25 +101,12 @@
         },
         "type": {
           "type": "string",
-          "description": "Section layout type",
-          "enum": ["2-col", "detailed", "education"]
+          "description": "Section layout type (defaults to 'detailed' if not specified)",
+          "enum": ["2-col", "detailed", "education", "honors", "certifications", "publications", "volunteer"]
         },
         "items": {
           "type": "array",
-          "description": "Section items",
-          "items": {
-            "oneOf": [
-              {
-                "$ref": "#/definitions/twoColItem"
-              },
-              {
-                "$ref": "#/definitions/detailedItem"
-              },
-              {
-                "$ref": "#/definitions/educationItem"
-              }
-            ]
-          }
+          "description": "Section items - structure depends on section type"
         }
       }
     },
@@ -229,6 +216,125 @@
         "items": {
           "type": "array",
           "description": "Additional details or achievements",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "honorsItem": {
+      "type": "object",
+      "description": "Honors & Awards item",
+      "required": ["title", "issuer"],
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Award or honor title"
+        },
+        "issuer": {
+          "type": "string",
+          "description": "Organization that issued the award"
+        },
+        "date": {
+          "type": "string",
+          "description": "Date received"
+        },
+        "description": {
+          "type": "string",
+          "description": "Description of the award"
+        }
+      }
+    },
+    "certificationsItem": {
+      "type": "object",
+      "description": "Certification item",
+      "required": ["name", "issuer"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Certification name"
+        },
+        "issuer": {
+          "type": "string",
+          "description": "Issuing organization"
+        },
+        "date": {
+          "type": "string",
+          "description": "Date obtained"
+        },
+        "expiry": {
+          "type": "string",
+          "description": "Expiration date"
+        },
+        "credentialId": {
+          "type": "string",
+          "description": "Credential ID or certificate number"
+        },
+        "url": {
+          "type": "string",
+          "description": "URL to verify certification"
+        }
+      }
+    },
+    "publicationsItem": {
+      "type": "object",
+      "description": "Publication item",
+      "required": ["title", "authors", "venue"],
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Publication title"
+        },
+        "authors": {
+          "type": "string",
+          "description": "Author list"
+        },
+        "venue": {
+          "type": "string",
+          "description": "Conference, journal, or publication venue"
+        },
+        "date": {
+          "type": "string",
+          "description": "Publication date"
+        },
+        "url": {
+          "type": "string",
+          "description": "URL to publication"
+        },
+        "doi": {
+          "type": "string",
+          "description": "Digital Object Identifier"
+        }
+      }
+    },
+    "volunteerItem": {
+      "type": "object",
+      "description": "Volunteer experience item",
+      "required": ["organization", "position"],
+      "properties": {
+        "organization": {
+          "type": "string",
+          "description": "Volunteer organization name"
+        },
+        "position": {
+          "type": "string",
+          "description": "Volunteer role"
+        },
+        "location": {
+          "type": "string",
+          "description": "Location"
+        },
+        "dates": {
+          "type": "string",
+          "description": "Date range"
+        },
+        "url": {
+          "type": "string",
+          "description": "Organization website"
+        },
+        "items": {
+          "type": "array",
+          "description": "Accomplishments and responsibilities",
           "items": {
             "type": "string"
           }

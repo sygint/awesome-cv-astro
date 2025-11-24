@@ -1,0 +1,95 @@
+---
+interface CertificationsSubSection {
+  name: string;
+  issuer: string;
+  date?: string;
+  expiry?: string;
+  credentialId?: string;
+  url?: string;
+}
+
+const { items } = Astro.props;
+---
+
+<>
+  {
+    items.map((cert: CertificationsSubSection) => (
+      <div class="sub-section certification">
+        <div class="sub-section-header">
+          <span class="name">
+            {cert.url ? (
+              <a href={cert.url} target="_blank" rel="noopener noreferrer">{cert.name}</a>
+            ) : (
+              cert.name
+            )}
+          </span>
+          {cert.date && <span class="date">{cert.date}</span>}
+        </div>
+        
+        <div class="issuer">{cert.issuer}</div>
+        
+        {(cert.credentialId || cert.expiry) && (
+          <div class="cert-details">
+            {cert.credentialId && <span class="credential-id">Credential ID: {cert.credentialId}</span>}
+            {cert.expiry && <span class="expiry">Expires: {cert.expiry}</span>}
+          </div>
+        )}
+      </div>
+    ))
+  }
+</>
+
+<style>
+  .sub-section.certification {
+    margin-bottom: var(--subSectionMarginBottom);
+  }
+
+  .sub-section.certification:last-child {
+    margin-bottom: var(--subSectionMarginBottomLast);
+  }
+
+  .sub-section-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .name {
+    font-weight: var(--fontWeightBold);
+    color: var(--colorText);
+    flex: 1;
+  }
+
+  .name a {
+    color: var(--colorText);
+    text-decoration: none;
+  }
+
+  .name a:hover {
+    color: var(--colorHighlight);
+  }
+
+  .date {
+    font-size: var(--datesFontSize);
+    font-style: italic;
+  }
+
+  .issuer {
+    font-size: var(--positionFontSize);
+    color: var(--colorHighlight);
+    margin-top: 0.05cm;
+  }
+
+  .cert-details {
+    display: flex;
+    gap: 15pt;
+    margin-top: 0.05cm;
+    font-size: 8pt;
+    color: var(--colorLightText);
+  }
+
+  .credential-id,
+  .expiry {
+    font-style: italic;
+  }
+</style>

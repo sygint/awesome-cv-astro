@@ -1,0 +1,94 @@
+---
+interface PublicationsSubSection {
+  title: string;
+  authors: string;
+  venue: string;
+  date?: string;
+  url?: string;
+  doi?: string;
+}
+
+const { items } = Astro.props;
+---
+
+<>
+  {
+    items.map((pub: PublicationsSubSection) => (
+      <div class="sub-section publication">
+        <div class="sub-section-header">
+          <span class="title">
+            {pub.url ? (
+              <a href={pub.url} target="_blank" rel="noopener noreferrer">{pub.title}</a>
+            ) : (
+              pub.title
+            )}
+          </span>
+          {pub.date && <span class="date">{pub.date}</span>}
+        </div>
+        
+        <div class="authors">{pub.authors}</div>
+        
+        <div class="venue">{pub.venue}</div>
+        
+        {pub.doi && (
+          <div class="doi">DOI: {pub.doi}</div>
+        )}
+      </div>
+    ))
+  }
+</>
+
+<style>
+  .sub-section.publication {
+    margin-bottom: var(--subSectionMarginBottom);
+  }
+
+  .sub-section.publication:last-child {
+    margin-bottom: var(--subSectionMarginBottomLast);
+  }
+
+  .sub-section-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .title {
+    font-weight: var(--fontWeightBold);
+    color: var(--colorText);
+    flex: 1;
+  }
+
+  .title a {
+    color: var(--colorText);
+    text-decoration: none;
+  }
+
+  .title a:hover {
+    color: var(--colorHighlight);
+  }
+
+  .date {
+    font-size: var(--datesFontSize);
+    font-style: italic;
+  }
+
+  .authors {
+    font-size: var(--positionFontSize);
+    margin-top: 0.05cm;
+    font-style: italic;
+  }
+
+  .venue {
+    font-size: 9pt;
+    color: var(--colorHighlight);
+    margin-top: 0.05cm;
+  }
+
+  .doi {
+    margin-top: 0.05cm;
+    font-size: 8pt;
+    color: var(--colorLightText);
+    font-family: monospace;
+  }
+</style>

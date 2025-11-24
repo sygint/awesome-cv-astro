@@ -1,0 +1,98 @@
+---
+interface VolunteerSubSection {
+  organization: string;
+  position: string;
+  location?: string;
+  dates?: string;
+  url?: string;
+  items?: string[];
+}
+
+const { items } = Astro.props;
+---
+
+<>
+  {
+    items.map((vol: VolunteerSubSection) => (
+      <div class="sub-section volunteer">
+        <div class="sub-section-header">
+          <span class="organization">
+            {vol.url ? (
+              <a href={vol.url} target="_blank" rel="noopener noreferrer">{vol.organization}</a>
+            ) : (
+              vol.organization
+            )}
+          </span>
+          {vol.location && <span class="location">{vol.location}</span>}
+        </div>
+        
+        <div class="sub-section-header">
+          <span class="position">{vol.position}</span>
+          <span class="dates">{vol.dates}</span>
+        </div>
+        
+        {vol.items && vol.items.length > 0 && (
+          <ul class="sub-section-items">
+            {vol.items.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        )}
+      </div>
+    ))
+  }
+</>
+
+<style>
+  .sub-section.volunteer {
+    margin-bottom: var(--subSectionMarginBottom);
+  }
+
+  .sub-section.volunteer:last-child {
+    margin-bottom: var(--subSectionMarginBottomLast);
+  }
+
+  .sub-section-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .organization {
+    font-weight: var(--fontWeightBold);
+    color: var(--colorText);
+    flex: 1;
+  }
+
+  .organization a {
+    color: var(--colorText);
+    text-decoration: none;
+  }
+
+  .organization a:hover {
+    color: var(--colorHighlight);
+  }
+
+  .location {
+    color: var(--colorHighlight);
+    font-style: italic;
+  }
+
+  .position {
+    font-size: var(--positionFontSize);
+  }
+
+  .dates {
+    font-size: var(--datesFontSize);
+    font-style: italic;
+  }
+
+  .sub-section-items {
+    width: 100%;
+    margin: var(--subSectionItemsUlMargin) 0;
+    padding-left: 13px;
+    box-sizing: border-box;
+    font-size: 9pt;
+    font-weight: var(--fontWeightLight);
+  }
+</style>

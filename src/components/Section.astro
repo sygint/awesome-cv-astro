@@ -1,6 +1,10 @@
 ---
 import SubSection from "./SubSection.astro";
 import EducationSubSection from "./EducationSubSection.astro";
+import HonorsSubSection from "./HonorsSubSection.astro";
+import CertificationsSubSection from "./CertificationsSubSection.astro";
+import PublicationsSubSection from "./PublicationsSubSection.astro";
+import VolunteerSubSection from "./VolunteerSubSection.astro";
 
 const { title, type, items } = Astro.props.details;
 ---
@@ -10,6 +14,14 @@ const { title, type, items } = Astro.props.details;
   <div class="section-body">
     {type === "education" ? (
       <EducationSubSection items={items} />
+    ) : type === "honors" ? (
+      <HonorsSubSection items={items} />
+    ) : type === "certifications" ? (
+      <CertificationsSubSection items={items} />
+    ) : type === "publications" ? (
+      <PublicationsSubSection items={items} />
+    ) : type === "volunteer" ? (
+      <VolunteerSubSection items={items} />
     ) : (
       <SubSection items={items} type={type} />
     )}
