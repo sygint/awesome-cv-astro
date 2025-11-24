@@ -1,0 +1,239 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://awesome-cv-astro.dev/schema/resume.json",
+  "title": "Awesome CV Astro Resume Schema",
+  "description": "Schema for resume-details.yml configuration",
+  "type": "object",
+  "required": ["header", "sections"],
+  "properties": {
+    "compact": {
+      "type": "boolean",
+      "description": "Use compact layout with reduced spacing",
+      "default": false
+    },
+    "header": {
+      "type": "object",
+      "required": ["name"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Full name",
+          "minLength": 1
+        },
+        "positions": {
+          "type": "array",
+          "description": "Job titles or roles",
+          "items": {
+            "type": "string"
+          }
+        },
+        "extras": {
+          "type": "object",
+          "description": "Contact information and social links",
+          "properties": {
+            "location": {
+              "$ref": "#/definitions/link"
+            },
+            "phone": {
+              "$ref": "#/definitions/link"
+            },
+            "email": {
+              "$ref": "#/definitions/link"
+            },
+            "website": {
+              "$ref": "#/definitions/link"
+            },
+            "github": {
+              "$ref": "#/definitions/link"
+            },
+            "gitlab": {
+              "$ref": "#/definitions/link"
+            },
+            "linkedin": {
+              "$ref": "#/definitions/link"
+            },
+            "linkedIn": {
+              "$ref": "#/definitions/link"
+            },
+            "twitter": {
+              "$ref": "#/definitions/link"
+            },
+            "stackoverflow": {
+              "$ref": "#/definitions/link"
+            },
+            "code": {
+              "$ref": "#/definitions/link"
+            }
+          }
+        }
+      }
+    },
+    "sections": {
+      "type": "array",
+      "description": "Resume sections",
+      "items": {
+        "$ref": "#/definitions/section"
+      }
+    }
+  },
+  "definitions": {
+    "link": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string",
+          "description": "Display text"
+        },
+        "href": {
+          "type": "string",
+          "description": "URL or link target"
+        }
+      }
+    },
+    "section": {
+      "type": "object",
+      "required": ["title"],
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Section title (e.g., Experience, Education, Technologies)",
+          "minLength": 1
+        },
+        "type": {
+          "type": "string",
+          "description": "Section layout type",
+          "enum": ["2-col", "detailed", "education"]
+        },
+        "items": {
+          "type": "array",
+          "description": "Section items",
+          "items": {
+            "oneOf": [
+              {
+                "$ref": "#/definitions/twoColItem"
+              },
+              {
+                "$ref": "#/definitions/detailedItem"
+              },
+              {
+                "$ref": "#/definitions/educationItem"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "twoColItem": {
+      "type": "object",
+      "description": "Two-column item (e.g., Technologies section)",
+      "required": ["title", "items"],
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Item title"
+        },
+        "items": {
+          "type": "array",
+          "description": "List of items",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "detailedItem": {
+      "type": "object",
+      "description": "Detailed item (e.g., Experience, Projects)",
+      "required": ["organization"],
+      "properties": {
+        "organization": {
+          "type": "string",
+          "description": "Company, project, or organization name"
+        },
+        "position": {
+          "type": "string",
+          "description": "Job title or role"
+        },
+        "location": {
+          "type": "string",
+          "description": "Location (city, state, country)"
+        },
+        "dates": {
+          "type": "string",
+          "description": "Date range (e.g., 'Jan 2020 - Present')"
+        },
+        "href": {
+          "type": "string",
+          "description": "Link to company/project website"
+        },
+        "technologies": {
+          "type": "array",
+          "description": "Technologies used",
+          "items": {
+            "type": "string"
+          }
+        },
+        "items": {
+          "type": "array",
+          "description": "Bullet points describing work/achievements",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "educationItem": {
+      "type": "object",
+      "description": "Education item",
+      "required": ["institution", "degree"],
+      "properties": {
+        "institution": {
+          "type": "string",
+          "description": "School/university name"
+        },
+        "degree": {
+          "type": "string",
+          "description": "Degree or certification"
+        },
+        "major": {
+          "type": "string",
+          "description": "Field of study or major"
+        },
+        "minor": {
+          "type": "string",
+          "description": "Minor field of study"
+        },
+        "location": {
+          "type": "string",
+          "description": "School location"
+        },
+        "dates": {
+          "type": "string",
+          "description": "Date range"
+        },
+        "gpa": {
+          "type": "string",
+          "description": "GPA (optional)"
+        },
+        "honors": {
+          "type": "string",
+          "description": "Honors or distinctions (e.g., 'Summa Cum Laude')"
+        },
+        "coursework": {
+          "type": "array",
+          "description": "Relevant coursework",
+          "items": {
+            "type": "string"
+          }
+        },
+        "items": {
+          "type": "array",
+          "description": "Additional details or achievements",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

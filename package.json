@@ -5,15 +5,18 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build && tsx ./scripts/build.ts",
+    "build": "npm run validate && astro build && tsx ./scripts/build.ts",
     "build-pdf": "tsx ./scripts/build.ts",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "validate": "tsx ./scripts/validate.ts"
   },
   "dependencies": {
     "astro": "^3.2.3"
   },
   "devDependencies": {
     "@rollup/plugin-yaml": "^4.1.2",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
     "playwright": "1.54.1",
     "tsx": "^3.13.0",
     "yaml": "^2.3.4"
