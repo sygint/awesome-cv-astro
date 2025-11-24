@@ -25,3 +25,5 @@ pnpm-debug.log*
 .devenv
 .devenv.flake.nix
 .direnv
+
+./.specstory/

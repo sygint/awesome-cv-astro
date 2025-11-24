@@ -147,3 +147,23 @@ sections:
           - At nihil est earum ut sed amet officiis
           - Aut nam vel est et cupiditate ipsa sed
           - Quos in odit impedit porro et architecto
+
+  - title: Education
+    type: education
+    items:
+      - institution: University of Example
+        degree: Bachelor of Science
+        major: Computer Science
+        minor: Mathematics
+        location: San Francisco, California
+        dates: Sep 2000 - May 2004
+        gpa: "3.9/4.0"
+        honors: Summa Cum Laude
+        coursework:
+          - Data Structures & Algorithms
+          - Operating Systems
+          - Database Systems
+          - Machine Learning
+        items:
+          - Dean's List all semesters
+          - President of Computer Science Club
