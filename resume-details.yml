@@ -1,28 +1,28 @@
 compact: false
 
 header:
-  name: Jordan K. Smith
+  name: Solstice Ravencroft
   positions:
     - Senior Software Engineer
     - Full Stack Developer
   extras:
     location:
-      text: Springfield, USA
+      text: Seattle, WA
     phone:
-      text: (555) 987-6543
-      href: tel:5559876543
+      text: (206) 555-0123
+      href: tel:2065550123
     email:
-      text: jordan.smith@example.com
-      href: mailto:jordan.smith@example.com
+      text: solstice.ravencroft@example.com
+      href: mailto:solstice.ravencroft@example.com
     website:
-      text: jordansmith.dev
-      href: https://jordansmith.dev
+      text: solsticeravencroft.dev
+      href: https://solsticeravencroft.dev
     github:
-      text: jsmith
-      href: https://github.com/jsmith
-    linkedIn:
-      text: jordanksmith
-      href: https://linkedin.com/in/jordanksmith
+      text: solsticeravencroft
+      href: https://github.com/solsticeravencroft
+    linkedin:
+      text: solsticeravencroft
+      href: https://linkedin.com/in/solsticeravencroft
 
 sections:
   - title: Technologies
@@ -31,147 +31,123 @@ sections:
       - title: Languages
         items:
           - TypeScript
-          - JavaScript
           - Python
           - Go
+          - Rust
           - SQL
-          - HTML/CSS
-      - title: Frameworks
+      - title: Frontend
         items:
           - React
-          - Node.js
           - Next.js
-          - Express
-          - FastAPI
+          - Vue.js
+          - Svelte
           - Tailwind CSS
-      - title: Tools & Platforms
+      - title: Backend
         items:
-          - Git
-          - Docker
-          - Kubernetes
-          - AWS
+          - Node.js
+          - Django
+          - FastAPI
           - PostgreSQL
           - Redis
-          - CI/CD
+      - title: DevOps
+        items:
+          - Docker
+          - Kubernetes
+          - Cloud Platform
+          - CI/CD Pipeline
+          - Terraform
 
   - title: Experience
     items:
-      - organization: Acme Tech Solutions
+      - organization: TechCorp
         position: Senior Software Engineer
-        location: Springfield, USA
+        location: Seattle, WA
         dates: Jan 2021 - Present
+        technologies:
+          - TypeScript
+          - React
+          - Node.js
+          - PostgreSQL
+          - Cloud Platform
         items:
-          - Led development of microservices architecture serving 2M+ daily active users
-          - Reduced API response time by 60% through optimization and caching strategies
-          - Mentored team of 5 junior engineers and conducted code reviews
-          - Architected real-time data pipeline processing 500k events per minute
-          
-      - organization: GlobalSoft Industries
-        position: Full Stack Developer
-        location: Remote
-        dates: Mar 2019 - Dec 2020
+          - Led development of microservices platform serving 10M+ users
+          - Reduced API response times by 60% through database optimization and caching
+          - Mentored team of 5 junior engineers in best practices and code review
+          - Implemented CI/CD pipeline reducing deployment time from 2 hours to 15 minutes
+
+      - organization: StartupXYZ
+        position: Full Stack Engineer
+        location: San Francisco, CA
+        dates: Jun 2018 - Dec 2020
+        technologies:
+          - JavaScript
+          - Vue.js
+          - Python
+          - Django
+          - Docker
         items:
-          - Built customer-facing dashboard using React and Node.js
-          - Implemented authentication system with OAuth 2.0 and JWT
-          - Designed and deployed RESTful APIs handling 100k+ requests daily
-          - Improved test coverage from 40% to 85% using Jest and Cypress
-          
-      - organization: ByteCraft Systems
-        position: Software Developer
-        location: Riverside, USA
-        dates: Jun 2017 - Feb 2019
+          - Built real-time collaboration features using WebSockets and Redis
+          - Developed RESTful API serving 500K requests/day with 99.9% uptime
+          - Created responsive web application with mobile-first design approach
+          - Reduced page load times by 40% through code splitting and lazy loading
+
+      - organization: WebAgency Inc
+        position: Software Engineer
+        location: Portland, OR
+        dates: Aug 2016 - May 2018
+        technologies:
+          - JavaScript
+          - React
+          - Node.js
+          - MongoDB
         items:
-          - Developed e-commerce platform features using JavaScript and Python
-          - Collaborated with UX team to implement responsive web designs
-          - Optimized database queries reducing load times by 45%
-          - Participated in Agile ceremonies and sprint planning
+          - Developed e-commerce platforms for large enterprise clients
+          - Implemented payment processing integration with major payment gateways
+          - Built admin dashboards with real-time analytics and reporting
+          - Collaborated with designers to implement pixel-perfect UI components
 
   - title: Projects
     items:
-      - organization: Open Source Contribution - DevToolkit
-        items:
-          - Contributed 50+ commits to popular developer tools library
-          - Implemented dark mode feature adopted by 10k+ users
-          - Fixed critical bugs and improved documentation
-          
-      - organization: Personal - Task Master Pro
+      - organization: DevTools Pro
         technologies:
-          - Next.js
           - TypeScript
-          - PostgreSQL
-          - Prisma
+          - Electron
+          - React
+          - WebAssembly
         items:
-          - Built full-stack task management application with real-time updates
-          - Implemented drag-and-drop interface using React DnD
-          - Deployed on cloud platform with automated CI/CD pipeline
+          - Open-source developer productivity tool with 5K+ stars
+          - Built cross-platform desktop app using Electron and React
+          - Implemented custom code parser using WebAssembly for 10x performance
+          - Active community with 50+ contributors and monthly releases
+
+      - organization: API Monitor
+        technologies:
+          - Go
+          - React
+          - TimescaleDB
+          - Grafana
+        items:
+          - SaaS platform for API monitoring and analytics
+          - Handles 1M+ API requests per minute with low latency metrics
+          - Built custom alerting system with chat and incident management integration
+          - Serverless architecture using cloud functions and NoSQL database
 
   - title: Education
     type: education
     items:
-      - institution: State University of Technology
+      - institution: Pacific Northwest University
         degree: Bachelor of Science
         major: Computer Science
-        location: Techville, USA
-        dates: Sep 2013 - May 2017
+        location: Seattle, WA
+        dates: Sep 2012 - Jun 2016
         gpa: "3.8/4.0"
-        honors: Cum Laude
+        honors: Magna Cum Laude
         coursework:
           - Data Structures & Algorithms
           - Operating Systems
-          - Database Systems
+          - Distributed Systems
           - Machine Learning
-          - Software Engineering
         items:
-          - Dean's List (6 semesters)
-          - Teaching Assistant for CS 101
-
-  - title: Certifications
-    type: certifications
-    items:
-      - name: Cloud Solutions Architect - Professional
-        issuer: CloudTech Institute
-        date: March 2023
-        expiry: March 2026
-        credentialId: CSA-PRO-12345
-        url: https://example.com/certification/
-        
-      - name: Certified Container Administrator
-        issuer: DevOps Certification Board
-        date: November 2022
-        credentialId: CCA-67890
-
-  - title: Honors & Awards
-    type: honors
-    items:
-      - title: Innovation Excellence Award
-        issuer: Acme Tech Solutions
-        date: December 2022
-        description: Recognized for developing real-time analytics dashboard that increased user engagement by 35%
-        
-      - title: Hackathon Champion - TechFest 2021
-        issuer: Developer Community Forum
-        date: April 2021
-        description: First place for building AI-powered code review assistant in 48 hours
-
-  - title: Publications
-    type: publications
-    items:
-      - title: "Building Scalable Web Applications: A Modern Approach"
-        authors: Smith, J.K., Johnson, M., Williams, P.
-        venue: "International Journal of Software Development 2023"
-        date: June 2023
-        url: https://example.com/paper
-        doi: 10.1234/ijsd.2023.56789
-
-  - title: Volunteer Experience
-    type: volunteer
-    items:
-      - organization: Tech For Everyone
-        position: Volunteer Developer
-        location: Springfield, USA
-        dates: Jan 2020 - Present
-        url: https://techforeveryone.example
-        items:
-          - Develop web applications for local community organizations
-          - Teach coding workshops to underserved youth
-          - Mentor junior developers in the program
+          - Dean's List all quarters
+          - Teaching Assistant for Intro to Programming (2 quarters)
+          - Computer Science Club Member

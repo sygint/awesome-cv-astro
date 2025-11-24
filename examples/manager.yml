@@ -1,0 +1,158 @@
+# yaml-language-server: $schema=../resume-schema.json
+
+compact: false
+
+header:
+  name: Peregrine Ashwood
+  positions:
+    - Engineering Manager
+    - Technical Lead
+  extras:
+    location:
+      text: Austin, TX
+    phone:
+      text: (555) 234-5678
+      href: tel:5552345678
+    email:
+      text: peregrine.ashwood@example.com
+      href: mailto:peregrine.ashwood@example.com
+    linkedIn:
+      text: peregrineashwood
+      href: https://linkedin.com/in/peregrineashwood
+
+sections:
+  - title: Technologies
+    type: 2-col
+    items:
+      - title: Languages & Frameworks
+        items:
+          - Python
+          - JavaScript/TypeScript
+          - Java
+          - React
+          - Node.js
+          - Spring Boot
+      - title: Leadership & Process
+        items:
+          - Agile/Scrum
+          - OKRs
+          - Performance Management
+          - Strategic Planning
+      - title: Infrastructure
+        items:
+          - Cloud Platforms
+          - Kubernetes
+          - CI/CD
+          - Microservices
+
+  - title: Experience
+    items:
+      - organization: TechVentures Corp
+        position: Engineering Manager
+        location: Austin, TX
+        dates: Jan 2020 - Present
+        items:
+          - Manage cross-functional team of 15 engineers across 3 product areas
+          - Grew team from 6 to 15 members through strategic hiring
+          - Established engineering culture focused on ownership and innovation
+          - Reduced deployment cycle time from 2 weeks to 2 days
+          - Led migration to microservices architecture serving 5M users
+          - Achieved 95% employee retention rate over 4 years
+          
+      - organization: InnovateSoft Solutions
+        position: Senior Technical Lead
+        location: San Jose, CA
+        dates: Mar 2017 - Dec 2019
+        items:
+          - Led team of 8 engineers building customer analytics platform
+          - Mentored 3 engineers who were promoted to senior positions
+          - Drove architectural decisions for high-traffic systems (10M req/day)
+          - Collaborated with product and design to define technical roadmap
+          - Reduced production incidents by 70% through improved monitoring
+          
+      - organization: DataFlow Systems
+        position: Software Engineer → Senior Software Engineer
+        location: Seattle, WA
+        dates: Jun 2014 - Feb 2017
+        items:
+          - Developed distributed data processing pipelines
+          - Led initiative to implement code review best practices
+          - Promoted to senior engineer after 18 months
+          - Mentored new engineers and led technical interviews
+
+  - title: Projects
+    items:
+      - organization: Internal - Engineering Excellence Program
+        items:
+          - Created mentorship program connecting 30+ engineers
+          - Established technical career ladder and promotion criteria
+          - Developed training curriculum for new managers
+          
+      - organization: Open Source - DevOps Toolkit
+        technologies:
+          - Python
+          - Docker
+          - Kubernetes
+        items:
+          - Maintain popular CLI tool with 5k+ stars on source control platform
+          - Coordinate contributions from 20+ open source contributors
+          - Speak at conferences about team scaling and DevOps
+
+  - title: Education
+    type: education
+    items:
+      - institution: Tech State University
+        degree: Bachelor of Science
+        major: Computer Science
+        location: Austin, TX
+        dates: Sep 2010 - May 2014
+        gpa: "3.7/4.0"
+        items:
+          - Minor in Business Administration
+          - Programming Team Captain
+
+  - title: Certifications
+    type: certifications
+    items:
+      - name: Certified Agile Master
+        issuer: Agile Institute
+        date: February 2021
+        credentialId: CAM-123456
+        
+      - name: Cloud Solutions Architect Professional
+        issuer: Cloud Certification Board
+        date: June 2020
+        expiry: June 2026
+        credentialId: CSA-789012
+
+  - title: Honors & Awards
+    type: honors
+    items:
+      - title: Manager of the Year
+        issuer: TechVentures Corp
+        date: December 2023
+        description: Recognized for exceptional team performance and culture building
+        
+      - title: Innovation Award
+        issuer: InnovateSoft Solutions
+        date: October 2019
+        description: Led project that generated $2M in new revenue
+
+  - title: Speaking & Leadership
+    type: volunteer
+    items:
+      - organization: Engineering Leadership Podcast
+        position: Guest Speaker
+        dates: Multiple episodes 2022-2024
+        items:
+          - Discussed scaling engineering teams and maintaining culture
+          - Shared insights on technical debt management
+          
+      - organization: Local Tech Meetup
+        position: Organizer
+        location: Austin, TX
+        dates: Jan 2021 - Present
+        items:
+          - Organize monthly meetups for 200+ members
+          - Host technical talks and networking events
+          - Mentor aspiring engineering managers

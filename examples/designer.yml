@@ -1,0 +1,131 @@
+# yaml-language-server: $schema=../resume-schema.json
+
+compact: false
+
+header:
+  name: Zephyr Thornfield
+  positions:
+    - Senior UX/UI Designer
+    - Product Designer
+  extras:
+    location:
+      text: Portland, OR
+    email:
+      text: zephyr.thornfield@example.com
+      href: mailto:zephyr.thornfield@example.com
+    website:
+      text: zephyrthornfield.design
+      href: https://zephyrthornfield.design
+    linkedIn:
+      text: zephyrthornfield
+      href: https://linkedin.com/in/zephyrthornfield
+
+sections:
+  - title: Technologies
+    type: 2-col
+    items:
+      - title: Design Tools
+        items:
+          - Vector Design Pro
+          - Design Studio XD
+          - UI Sketch Tool
+          - Photo Editor Pro
+          - Vector Illustrator
+          - Motion Graphics Suite
+      - title: Prototyping
+        items:
+          - Animation Tool Pro
+          - Interactive Designer
+          - Prototype Studio
+          - Motion Prototyper
+      - title: Front-end
+        items:
+          - HTML/CSS
+          - React
+          - Tailwind CSS
+          - Styled Components
+
+  - title: Experience
+    items:
+      - organization: DesignLab Studios
+        position: Senior UX/UI Designer
+        location: Portland, OR
+        dates: Mar 2021 - Present
+        items:
+          - Lead design for flagship SaaS product serving 500k+ users
+          - Conducted user research and usability testing with 100+ participants
+          - Created and maintained design system used across 15+ products
+          - Collaborated with engineering team to ensure pixel-perfect implementation
+          
+      - organization: CreativeWorks Agency
+        position: Product Designer
+        location: Remote
+        dates: Jun 2019 - Feb 2021
+        items:
+          - Designed mobile-first experiences for e-commerce clients
+          - Increased conversion rates by 40% through iterative A/B testing
+          - Led workshop sessions with stakeholders to define product strategy
+          - Mentored junior designers on best practices and design principles
+          
+      - organization: PixelPerfect Inc
+        position: UI Designer
+        location: Seattle, WA
+        dates: Jan 2017 - May 2019
+        items:
+          - Created high-fidelity mockups and interactive prototypes
+          - Designed responsive interfaces for web and mobile applications
+          - Collaborated with developers to implement design specifications
+          - Contributed to brand identity and marketing materials
+
+  - title: Projects
+    items:
+      - organization: Open Source - UI Component Library
+        items:
+          - Designed and documented 50+ reusable components
+          - Maintained design library with 2k+ community downloads
+          - Created comprehensive design tokens and guidelines
+          
+      - organization: Personal - Design Portfolio System
+        technologies:
+          - Next.js
+          - Animation Library
+          - Tailwind CSS
+        items:
+          - Built custom portfolio platform with case study templates
+          - Implemented smooth animations and transitions
+          - Optimized for performance and accessibility
+
+  - title: Education
+    type: education
+    items:
+      - institution: Metropolitan Design Institute
+        degree: Bachelor of Fine Arts
+        major: Graphic Design
+        location: New York, NY
+        dates: Sep 2012 - May 2016
+        gpa: "3.9/4.0"
+        honors: Summa Cum Laude
+        items:
+          - President of Design Guild
+          - Won Annual Portfolio Competition
+
+  - title: Honors & Awards
+    type: honors
+    items:
+      - title: Best UX Design Award
+        issuer: Design Excellence Conference
+        date: November 2023
+        description: Recognized for innovative dashboard design that improved user productivity by 55%
+        
+      - title: Rising Star Designer
+        issuer: DesignLab Studios
+        date: July 2022
+        description: Company-wide recognition for outstanding contributions to product design
+
+  - title: Certifications
+    type: certifications
+    items:
+      - name: Professional UX Design Certificate
+        issuer: Digital Design Academy
+        date: January 2021
+        credentialId: PDC-2021-4567

@@ -1,7 +1,7 @@
 compact: false
 
 header:
-  name: Alex Chen
+  name: Solstice Ravencroft
   positions:
     - Senior Software Engineer
     - Full Stack Developer
@@ -12,17 +12,17 @@ header:
       text: (206) 555-0123
       href: tel:2065550123
     email:
-      text: alex.chen@example.com
-      href: mailto:alex.chen@example.com
+      text: solstice.ravencroft@example.com
+      href: mailto:solstice.ravencroft@example.com
     website:
-      text: alexchen.dev
-      href: https://alexchen.dev
+      text: solsticeravencroft.dev
+      href: https://solsticeravencroft.dev
     github:
-      text: alexchen
-      href: https://github.com/alexchen
+      text: solsticeravencroft
+      href: https://github.com/solsticeravencroft
     linkedin:
-      text: alexchen
-      href: https://linkedin.com/in/alexchen
+      text: solsticeravencroft
+      href: https://linkedin.com/in/solsticeravencroft
 
 sections:
   - title: Technologies
@@ -53,8 +53,8 @@ sections:
         items:
           - Docker
           - Kubernetes
-          - AWS
-          - GitHub Actions
+          - Cloud Platform
+          - CI/CD Pipeline
           - Terraform
 
   - title: Experience
@@ -68,7 +68,7 @@ sections:
           - React
           - Node.js
           - PostgreSQL
-          - AWS
+          - Cloud Platform
         items:
           - Led development of microservices platform serving 10M+ users
           - Reduced API response times by 60% through database optimization and caching
@@ -101,8 +101,8 @@ sections:
           - Node.js
           - MongoDB
         items:
-          - Developed e-commerce platforms for Fortune 500 clients
-          - Implemented payment processing integration with Stripe and PayPal
+          - Developed e-commerce platforms for large enterprise clients
+          - Implemented payment processing integration with major payment gateways
           - Built admin dashboards with real-time analytics and reporting
           - Collaborated with designers to implement pixel-perfect UI components
 
@@ -115,7 +115,7 @@ sections:
           - React
           - WebAssembly
         items:
-          - Open-source developer productivity tool with 5K+ GitHub stars
+          - Open-source developer productivity tool with 5K+ stars
           - Built cross-platform desktop app using Electron and React
           - Implemented custom code parser using WebAssembly for 10x performance
           - Active community with 50+ contributors and monthly releases
@@ -129,13 +129,13 @@ sections:
         items:
           - SaaS platform for API monitoring and analytics
           - Handles 1M+ API requests per minute with low latency metrics
-          - Built custom alerting system with Slack and PagerDuty integration
-          - Serverless architecture using AWS Lambda and DynamoDB
+          - Built custom alerting system with chat and incident management integration
+          - Serverless architecture using cloud functions and NoSQL database
 
   - title: Education
     type: education
     items:
-      - institution: University of Washington
+      - institution: Pacific Northwest University
         degree: Bachelor of Science
         major: Computer Science
         location: Seattle, WA
@@ -150,3 +150,4 @@ sections:
         items:
           - Dean's List all quarters
           - Teaching Assistant for Intro to Programming (2 quarters)
+          - Computer Science Club Member

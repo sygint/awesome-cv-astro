@@ -1,0 +1,137 @@
+# yaml-language-server: $schema=../resume-schema.json
+
+compact: false
+
+header:
+  name: Dr. Lysander Quilbrook
+  positions:
+    - Assistant Professor of Computer Science
+    - Machine Learning Researcher
+  extras:
+    location:
+      text: Cambridge, MA
+    email:
+      text: lysander.quilbrook@example.edu
+      href: mailto:lysander.quilbrook@example.edu
+    website:
+      text: lysanderquilbrook.research
+      href: https://lysanderquilbrook.research
+    github:
+      text: drquilbrook
+      href: https://github.com/drquilbrook
+
+sections:
+  - title: Research Interests
+    type: 2-col
+    items:
+      - title: Primary Areas
+        items:
+          - Machine Learning
+          - Natural Language Processing
+          - Computer Vision
+          - Deep Learning
+      - title: Applications
+        items:
+          - Healthcare AI
+          - Autonomous Systems
+          - Human-AI Interaction
+          - Ethical AI
+
+  - title: Experience
+    items:
+      - organization: Institute of Technology
+        position: Assistant Professor
+        location: Cambridge, MA
+        dates: Sep 2021 - Present
+        items:
+          - Teaching graduate courses in ML and AI (avg rating 4.8/5.0)
+          - Lead research lab with 8 PhD students and 12 undergraduates
+          - Secured $2M in research funding from NSF and industry partners
+          - Published 15+ papers in top-tier venues (h-index 18)
+          
+      - organization: Tech Research Labs
+        position: Research Scientist
+        location: Palo Alto, CA
+        dates: Jun 2019 - Aug 2021
+        items:
+          - Developed novel algorithms for natural language understanding
+          - Led team of 6 researchers on large-scale ML projects
+          - Filed 3 patents on machine learning techniques
+          - Collaborated with product teams on AI integration
+
+  - title: Education
+    type: education
+    items:
+      - institution: Elite University
+        degree: Doctor of Philosophy
+        major: Computer Science
+        location: Silicon Valley, CA
+        dates: Sep 2015 - May 2019
+        honors: Outstanding Dissertation Award
+        items:
+          - Dissertation on "Neural Approaches to Semantic Understanding"
+          - Advised by Prof. Celestine Windermere
+          - Teaching Assistant for 6 semesters
+          
+      - institution: State University
+        degree: Master of Science
+        major: Computer Science
+        location: Bay Area, CA
+        dates: Sep 2013 - May 2015
+        gpa: "4.0/4.0"
+        honors: Highest Distinction
+
+  - title: Publications
+    type: publications
+    items:
+      - title: "Attention Mechanisms for Contextual Understanding in NLP"
+        authors: Quilbrook, L., Thimbleton, J., Vexworth, K.
+        venue: "International Conference on Neural Processing 2023"
+        date: December 2023
+        
+      - title: "Deep Learning Approaches to Medical Image Analysis"
+        authors: Quilbrook, L., Starweather, L., Grimsby, P., Moonbeam, R.
+        venue: "Journal of Medical Imaging Technology 2023"
+        date: March 2023
+        
+      - title: "Ethical Considerations in AI-Driven Healthcare"
+        authors: Quilbrook, L., Frostwick, T.
+        venue: "Journal of AI Ethics 2022"
+        date: September 2022
+
+  - title: Honors & Awards
+    type: honors
+    items:
+      - title: Early Career Research Award
+        issuer: National Research Foundation
+        date: March 2023
+        description: Five-year grant for research in explainable AI systems ($500k)
+        
+      - title: Best Paper Award
+        issuer: Conference on Machine Learning
+        date: June 2022
+        description: Recognized for groundbreaking work in neural architecture search
+        
+      - title: Outstanding Dissertation Award
+        issuer: Elite University
+        date: May 2019
+        description: Awarded to top 1% of PhD dissertations
+
+  - title: Service & Leadership
+    type: volunteer
+    items:
+      - organization: ML Conference Review Committee
+        position: Program Committee Member
+        dates: 2021 - Present
+        items:
+          - Review papers for top-tier ML conferences
+          - Serve on organizing committee for annual symposium
+          
+      - organization: Women in AI Initiative
+        position: Mentor
+        location: Cambridge, MA
+        dates: Sep 2020 - Present
+        items:
+          - Mentor early-career researchers in AI
+          - Organize monthly career development workshops
+          - Advocate for diversity in computer science

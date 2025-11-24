@@ -6,7 +6,7 @@ A fork of [awesome-cv-react](https://github.com/sygint/awesome-cv-react) to [Ele
 
 | Resume | Cover Letter |
 |:---:|:---:|
-| [![Resume](build/Jordan-K-Smith.resume.png)](build/Jordan-K-Smith.pdf)  | [![Cover Letter](build/cover-letter.sample.png)](build/cover-letter.sample.pdf) |
+| [![Resume](build/Solstice-Ravencroft.resume.png)](build/Solstice-Ravencroft.pdf)  | [![Cover Letter](build/cover-letter.sample.png)](build/cover-letter.sample.pdf) |
 
 # Getting Started
 
