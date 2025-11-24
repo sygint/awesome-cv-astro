@@ -1,0 +1,132 @@
+compact: true
+
+header:
+  name: Jordan Taylor
+  positions:
+    - Computer Science Student
+    - Aspiring Software Engineer
+  extras:
+    location:
+      text: Boston, MA
+    phone:
+      text: (617) 555-0198
+      href: tel:6175550198
+    email:
+      text: jordan.taylor@university.edu
+      href: mailto:jordan.taylor@university.edu
+    github:
+      text: jtaylor
+      href: https://github.com/jtaylor
+    linkedin:
+      text: jordantaylor
+      href: https://linkedin.com/in/jordantaylor
+
+sections:
+  - title: Education
+    type: education
+    items:
+      - institution: Massachusetts Institute of Technology
+        degree: Bachelor of Science
+        major: Computer Science
+        location: Cambridge, MA
+        dates: Sep 2021 - Expected May 2025
+        gpa: "3.7/4.0"
+        coursework:
+          - Introduction to Algorithms
+          - Software Engineering
+          - Web Development
+          - Database Systems
+          - Artificial Intelligence
+        items:
+          - Dean's List Fall 2022, Spring 2023
+          - Member of ACM Student Chapter
+
+  - title: Technologies
+    type: 2-col
+    items:
+      - title: Languages
+        items:
+          - Python
+          - JavaScript
+          - Java
+          - C++
+          - SQL
+      - title: Frameworks
+        items:
+          - React
+          - Node.js
+          - Express
+          - Flask
+          - TailwindCSS
+      - title: Tools
+        items:
+          - Git
+          - Docker
+          - VS Code
+          - Linux
+          - PostgreSQL
+
+  - title: Experience
+    items:
+      - organization: TechStart Inc
+        position: Software Engineering Intern
+        location: Boston, MA
+        dates: Jun 2024 - Aug 2024
+        technologies:
+          - React
+          - TypeScript
+          - Node.js
+          - MongoDB
+        items:
+          - Developed features for customer-facing web application
+          - Fixed 15+ bugs and improved application performance by 25%
+          - Participated in agile development with daily standups and sprint planning
+          - Collaborated with senior engineers on code reviews and pair programming
+
+      - organization: University IT Department
+        position: Student Web Developer
+        location: Cambridge, MA
+        dates: Sep 2023 - Present
+        technologies:
+          - JavaScript
+          - PHP
+          - MySQL
+          - WordPress
+        items:
+          - Maintain university department websites serving 10K+ visitors monthly
+          - Implement accessibility improvements to meet WCAG 2.1 standards
+          - Create custom WordPress plugins for faculty directory and event calendar
+
+  - title: Projects
+    items:
+      - organization: Study Group Finder
+        technologies:
+          - React
+          - Firebase
+          - Material-UI
+        items:
+          - Web app connecting students for collaborative study sessions
+          - Used by 200+ students across campus
+          - Implemented real-time chat using Firebase Realtime Database
+          - Deployed on Vercel with automated CI/CD from GitHub
+
+      - organization: Personal Portfolio
+        technologies:
+          - Next.js
+          - TypeScript
+          - TailwindCSS
+          - Vercel
+        items:
+          - Built responsive portfolio website showcasing projects and skills
+          - Implemented dark mode and accessibility features
+          - Optimized for performance with Lighthouse score of 95+
+
+      - organization: CLI Task Manager
+        technologies:
+          - Python
+          - SQLite
+          - Click
+        items:
+          - Command-line task management tool with priority and tagging
+          - Published to PyPI with 100+ downloads
+          - Wrote comprehensive unit tests achieving 90% code coverage

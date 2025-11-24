@@ -1,0 +1,152 @@
+compact: false
+
+header:
+  name: Alex Chen
+  positions:
+    - Senior Software Engineer
+    - Full Stack Developer
+  extras:
+    location:
+      text: Seattle, WA
+    phone:
+      text: (206) 555-0123
+      href: tel:2065550123
+    email:
+      text: alex.chen@example.com
+      href: mailto:alex.chen@example.com
+    website:
+      text: alexchen.dev
+      href: https://alexchen.dev
+    github:
+      text: alexchen
+      href: https://github.com/alexchen
+    linkedin:
+      text: alexchen
+      href: https://linkedin.com/in/alexchen
+
+sections:
+  - title: Technologies
+    type: 2-col
+    items:
+      - title: Languages
+        items:
+          - TypeScript
+          - Python
+          - Go
+          - Rust
+          - SQL
+      - title: Frontend
+        items:
+          - React
+          - Next.js
+          - Vue.js
+          - Svelte
+          - Tailwind CSS
+      - title: Backend
+        items:
+          - Node.js
+          - Django
+          - FastAPI
+          - PostgreSQL
+          - Redis
+      - title: DevOps
+        items:
+          - Docker
+          - Kubernetes
+          - AWS
+          - GitHub Actions
+          - Terraform
+
+  - title: Experience
+    items:
+      - organization: TechCorp
+        position: Senior Software Engineer
+        location: Seattle, WA
+        dates: Jan 2021 - Present
+        technologies:
+          - TypeScript
+          - React
+          - Node.js
+          - PostgreSQL
+          - AWS
+        items:
+          - Led development of microservices platform serving 10M+ users
+          - Reduced API response times by 60% through database optimization and caching
+          - Mentored team of 5 junior engineers in best practices and code review
+          - Implemented CI/CD pipeline reducing deployment time from 2 hours to 15 minutes
+
+      - organization: StartupXYZ
+        position: Full Stack Engineer
+        location: San Francisco, CA
+        dates: Jun 2018 - Dec 2020
+        technologies:
+          - JavaScript
+          - Vue.js
+          - Python
+          - Django
+          - Docker
+        items:
+          - Built real-time collaboration features using WebSockets and Redis
+          - Developed RESTful API serving 500K requests/day with 99.9% uptime
+          - Created responsive web application with mobile-first design approach
+          - Reduced page load times by 40% through code splitting and lazy loading
+
+      - organization: WebAgency Inc
+        position: Software Engineer
+        location: Portland, OR
+        dates: Aug 2016 - May 2018
+        technologies:
+          - JavaScript
+          - React
+          - Node.js
+          - MongoDB
+        items:
+          - Developed e-commerce platforms for Fortune 500 clients
+          - Implemented payment processing integration with Stripe and PayPal
+          - Built admin dashboards with real-time analytics and reporting
+          - Collaborated with designers to implement pixel-perfect UI components
+
+  - title: Projects
+    items:
+      - organization: DevTools Pro
+        technologies:
+          - TypeScript
+          - Electron
+          - React
+          - WebAssembly
+        items:
+          - Open-source developer productivity tool with 5K+ GitHub stars
+          - Built cross-platform desktop app using Electron and React
+          - Implemented custom code parser using WebAssembly for 10x performance
+          - Active community with 50+ contributors and monthly releases
+
+      - organization: API Monitor
+        technologies:
+          - Go
+          - React
+          - TimescaleDB
+          - Grafana
+        items:
+          - SaaS platform for API monitoring and analytics
+          - Handles 1M+ API requests per minute with low latency metrics
+          - Built custom alerting system with Slack and PagerDuty integration
+          - Serverless architecture using AWS Lambda and DynamoDB
+
+  - title: Education
+    type: education
+    items:
+      - institution: University of Washington
+        degree: Bachelor of Science
+        major: Computer Science
+        location: Seattle, WA
+        dates: Sep 2012 - Jun 2016
+        gpa: "3.8/4.0"
+        honors: Magna Cum Laude
+        coursework:
+          - Data Structures & Algorithms
+          - Operating Systems
+          - Distributed Systems
+          - Machine Learning
+        items:
+          - Dean's List all quarters
+          - Teaching Assistant for Intro to Programming (2 quarters)
