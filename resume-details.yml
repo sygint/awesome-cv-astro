@@ -1,31 +1,28 @@
 compact: false
 
 header:
-  name: First M. Last
+  name: Jordan K. Smith
   positions:
-    - Software Engineer
-    - Full Stack Engineer
+    - Senior Software Engineer
+    - Full Stack Developer
   extras:
     location:
-      text: Praesentium, Corrupti, Et
+      text: Springfield, USA
     phone:
-      text: (123) 456-7890
-      href: tel:1234567890
+      text: (555) 987-6543
+      href: tel:5559876543
     email:
-      text: email@example.com
-      href: mailto:email@example.com
+      text: jordan.smith@example.com
+      href: mailto:jordan.smith@example.com
     website:
-      text: example.com
-      href: https://example.com
+      text: jordansmith.dev
+      href: https://jordansmith.dev
     github:
-      text: username
-      href: https://github.com/username
-    code:
-      text: ""
-      href: ""
+      text: jsmith
+      href: https://github.com/jsmith
     linkedIn:
-      text: username
-      href: https://linkedin.com/username
+      text: jordanksmith
+      href: https://linkedin.com/in/jordanksmith
 
 sections:
   - title: Technologies
@@ -33,137 +30,148 @@ sections:
     items:
       - title: Languages
         items:
-          - Et
-          - Praesentium
-          - Corrupti
-          - Laudantium
-          - Sit
-          - Voluptatem
-          - Quam
-          - Officia
+          - TypeScript
+          - JavaScript
+          - Python
+          - Go
+          - SQL
+          - HTML/CSS
       - title: Frameworks
         items:
-          - Vero
-          - Deserunt
-          - Nesciunt
-          - Quia
-          - Et
-          - Molestiae
-          - Inventore
-          - Voluptas
-          - Ratione
+          - React
+          - Node.js
+          - Next.js
+          - Express
+          - FastAPI
+          - Tailwind CSS
+      - title: Tools & Platforms
+        items:
+          - Git
+          - Docker
+          - Kubernetes
+          - AWS
+          - PostgreSQL
+          - Redis
+          - CI/CD
 
   - title: Experience
     items:
-      - organization: Fugit Et Est
-        position: Beatae mollitia cupiditate
-        technologies:
-          - Ut
-          - Atque
-          - Perspiciatis
-          - Rerum
-          - Laudantium
-          - Id
-          - Recusandae
-          - Omnis
-        location: New York City, New York
-        dates: Nov 2014 - Oct 2018
+      - organization: Acme Tech Solutions
+        position: Senior Software Engineer
+        location: Springfield, USA
+        dates: Jan 2021 - Present
         items:
-          - Repudiandae quos distinctio velit adipisci sapiente
-          - Culpa impedit quibusdam sed non sed doloremque
-          - Ut atque perspiciatis rerum laudantium id recusandae omnis
-          - In aut voluptatem ipsum voluptatem qui numquam sint perferendis
-
-      - organization: Laudantium Id Recusandae
-        position: Ducimus Unde Incidunt
-        technologies:
-          - In
-          - Aut
-          - Voluptatem
-          - Ipsum
-          - Voluptatem
-          - Qui
-          - Numquam
-          - Sint
-          - Perferendis
-        location: Newark, New Jersey
-        dates: Aug 2012 - May 2014
+          - Led development of microservices architecture serving 2M+ daily active users
+          - Reduced API response time by 60% through optimization and caching strategies
+          - Mentored team of 5 junior engineers and conducted code reviews
+          - Architected real-time data pipeline processing 500k events per minute
+          
+      - organization: GlobalSoft Industries
+        position: Full Stack Developer
+        location: Remote
+        dates: Mar 2019 - Dec 2020
         items:
-          - Repudiandae quos distinctio velit adipisci sapiente
-          - Culpa impedit quibusdam sed non sed doloremque
-          - Ut atque perspiciatis rerum laudantium id recusandae omnis
-          - In aut voluptatem ipsum voluptatem qui numquam sint perferendis
-
-      - organization: Quisquam Sit Iure
-        position: Assumenda Asperiores
-        technologies:
-          - Culpa
-          - Impedit
-          - Quibusdam
-          - Sed
-          - Non
-          - Sed
-          - Doloremque
-        location: Dallas, Texas
-        dates: Jun 2008 - July 2012
+          - Built customer-facing dashboard using React and Node.js
+          - Implemented authentication system with OAuth 2.0 and JWT
+          - Designed and deployed RESTful APIs handling 100k+ requests daily
+          - Improved test coverage from 40% to 85% using Jest and Cypress
+          
+      - organization: ByteCraft Systems
+        position: Software Developer
+        location: Riverside, USA
+        dates: Jun 2017 - Feb 2019
         items:
-          - Repudiandae quos distinctio velit adipisci sapiente
-          - Culpa impedit quibusdam sed non sed doloremque
-          - Ut atque perspiciatis rerum laudantium id recusandae omnis
-          - In aut voluptatem ipsum voluptatem qui numquam sint perferendis
-
-      - organization: Quisquam Sit Iure
-        position: Assumenda Asperiores
-        technologies:
-          - Culpa
-          - Impedit
-          - Quibusdam
-          - Sed
-          - Non
-          - Sed
-          - Doloremque
-        location: San Francisco, California
-        dates: Apr 2004 - Jun 2008
-        items:
-          - Repudiandae quos distinctio velit adipisci sapiente
-          - Culpa impedit quibusdam sed non sed doloremque
-          - Ut atque perspiciatis rerum laudantium id recusandae omnis
-          - In aut voluptatem ipsum voluptatem qui numquam sint perferendis
+          - Developed e-commerce platform features using JavaScript and Python
+          - Collaborated with UX team to implement responsive web designs
+          - Optimized database queries reducing load times by 45%
+          - Participated in Agile ceremonies and sprint planning
 
   - title: Projects
     items:
-      - organization: Minus Dignissimos Sapiente
-        technologies:
-          - Aut
-          - Nam
-          - Vel
-          - Est
-          - Et
-          - Cupiditate
-          - Ipsa
-          - Sed
+      - organization: Open Source Contribution - DevToolkit
         items:
-          - Ut deleniti voluptatibus occaecati at id suscipit et voluptas
-          - At nihil est earum ut sed amet officiis
-          - Aut nam vel est et cupiditate ipsa sed
-          - Quos in odit impedit porro et architecto
+          - Contributed 50+ commits to popular developer tools library
+          - Implemented dark mode feature adopted by 10k+ users
+          - Fixed critical bugs and improved documentation
+          
+      - organization: Personal - Task Master Pro
+        technologies:
+          - Next.js
+          - TypeScript
+          - PostgreSQL
+          - Prisma
+        items:
+          - Built full-stack task management application with real-time updates
+          - Implemented drag-and-drop interface using React DnD
+          - Deployed on cloud platform with automated CI/CD pipeline
 
   - title: Education
     type: education
     items:
-      - institution: University of Example
+      - institution: State University of Technology
         degree: Bachelor of Science
         major: Computer Science
-        minor: Mathematics
-        location: San Francisco, California
-        dates: Sep 2000 - May 2004
-        gpa: "3.9/4.0"
-        honors: Summa Cum Laude
+        location: Techville, USA
+        dates: Sep 2013 - May 2017
+        gpa: "3.8/4.0"
+        honors: Cum Laude
         coursework:
           - Data Structures & Algorithms
           - Operating Systems
           - Database Systems
           - Machine Learning
+          - Software Engineering
         items:
-          - Dean's List all semesters
-          - President of Computer Science Club
+          - Dean's List (6 semesters)
+          - Teaching Assistant for CS 101
+
+  - title: Certifications
+    type: certifications
+    items:
+      - name: Cloud Solutions Architect - Professional
+        issuer: CloudTech Institute
+        date: March 2023
+        expiry: March 2026
+        credentialId: CSA-PRO-12345
+        url: https://example.com/certification/
+        
+      - name: Certified Container Administrator
+        issuer: DevOps Certification Board
+        date: November 2022
+        credentialId: CCA-67890
+
+  - title: Honors & Awards
+    type: honors
+    items:
+      - title: Innovation Excellence Award
+        issuer: Acme Tech Solutions
+        date: December 2022
+        description: Recognized for developing real-time analytics dashboard that increased user engagement by 35%
+        
+      - title: Hackathon Champion - TechFest 2021
+        issuer: Developer Community Forum
+        date: April 2021
+        description: First place for building AI-powered code review assistant in 48 hours
+
+  - title: Publications
+    type: publications
+    items:
+      - title: "Building Scalable Web Applications: A Modern Approach"
+        authors: Smith, J.K., Johnson, M., Williams, P.
+        venue: "International Journal of Software Development 2023"
+        date: June 2023
+        url: https://example.com/paper
+        doi: 10.1234/ijsd.2023.56789
+
+  - title: Volunteer Experience
+    type: volunteer
+    items:
+      - organization: Tech For Everyone
+        position: Volunteer Developer
+        location: Springfield, USA
+        dates: Jan 2020 - Present
+        url: https://techforeveryone.example
+        items:
+          - Develop web applications for local community organizations
+          - Teach coding workshops to underserved youth
+          - Mentor junior developers in the program
