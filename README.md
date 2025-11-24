@@ -6,7 +6,7 @@ A fork of [awesome-cv-react](https://github.com/sygint/awesome-cv-react) to [Ele
 
 | Resume | Cover Letter |
 |:---:|:---:|
-| [![Resume](build/First-M-Last.resume.1.png)](build/First-M-Last.pdf)  | [![Cover Letter](build/cover-letter.sample.1.png)](build/cover-letter.sample.pdf) |
+| [![Resume](build/First-M-Last.resume.png)](build/First-M-Last.pdf)  | [![Cover Letter](build/cover-letter.sample.png)](build/cover-letter.sample.pdf) |
 
 # Getting Started
 

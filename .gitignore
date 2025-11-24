@@ -1,5 +1,7 @@
-# build output
-build/
+# build output - keep preview images for README
+build/*
+!build/*.pdf
+!build/*.png
 # generated types
 .astro/
 .idea/
