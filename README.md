@@ -6,7 +6,7 @@ A fork of [awesome-cv-react](https://github.com/sygint/awesome-cv-react) to [Ele
 
 | Resume | Cover Letter |
 |:---:|:---:|
-| [![Resume](build/First-M-Last.resume.png)](build/First-M-Last.pdf)  | [![Cover Letter](build/cover-letter.sample.png)](build/cover-letter.sample.pdf) |
+| [![Resume](build/Jordan-K-Smith.resume.png)](build/Jordan-K-Smith.pdf)  | [![Cover Letter](build/cover-letter.sample.png)](build/cover-letter.sample.pdf) |
 
 # Getting Started
 
@@ -118,8 +118,11 @@ The conversion scripts (`convertToPdf.ts` and `convertToPng.ts`) use Playwright'
 
 **Note**: On NixOS, the devenv configuration automatically uses pre-patched Playwright browsers from nixpkgs, eliminating the need for manual browser installation or patching.
 
-## Work In Progress
+## Features
 
-There are many features supported by awesome-cv that are yet to be supported in this, including Honors & Awards, Certifications, and Education, as well as the cover letter.
-
-I hope to work on these in the near future.
+- ✅ **Multiple Section Types**: Technologies, Experience, Projects, Education, Certifications, Honors & Awards, Publications, Volunteer Experience
+- ✅ **YAML Configuration**: Simple, version-control friendly configuration
+- ✅ **Schema Validation**: Built-in validation with helpful error messages
+- ✅ **PDF & PNG Generation**: Automated conversion using Playwright
+- ✅ **Responsive Design**: Clean, professional layout optimized for ATS systems
+- ✅ **Cover Letters**: Support for multiple cover letter templates
