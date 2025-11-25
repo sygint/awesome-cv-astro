@@ -91,6 +91,8 @@ Inside of your Astro project, you'll see the following folders and files:
 
 Any static assets, like images, can be placed in the `public/` directory.
 
+For a detailed technical overview and component structure, see [ARCHITECTURE.md](ARCHITECTURE.md).
+
 ## Commands
 
 All commands are run from the root of the project, from a terminal:
@@ -126,3 +128,12 @@ The conversion scripts (`convertToPdf.ts` and `convertToPng.ts`) use Playwright'
 - ✅ **PDF & PNG Generation**: Automated conversion using Playwright
 - ✅ **Responsive Design**: Clean, professional layout optimized for ATS systems
 - ✅ **Cover Letters**: Support for multiple cover letter templates
+
+## Documentation
+
+- **[Examples](examples/)** - 5 role-specific resume examples (software engineer, designer, academic, manager, student)
+- **[Customization Guide](docs/CUSTOMIZATION.md)** - How to customize styling and add new sections
+- **[Troubleshooting](docs/TROUBLESHOOTING.md)** - Common issues and solutions
+- **[Comparison](docs/COMPARISON.md)** - How awesome-cv-astro compares to LaTeX, online builders, and Word
+- **[Architecture](ARCHITECTURE.md)** - Technical overview and design principles
+- **[Contributing](CONTRIBUTING.md)** - Guidelines for contributors
