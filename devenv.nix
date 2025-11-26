@@ -25,6 +25,12 @@
     if playwrightDriver != null then playwrightDriver.browsers else null;
   in
 
+  # Use nixpkgs Playwright browsers to avoid the dynamic binary issues on NixOS
+  # (this points Playwright to the browsers supplied by nixpkgs)
+  let
+  playwrightBrowsers = pkgs.playwright.driver.browsers; # nixpkgs playwright driver path
+  in
+
   # https://devenv.sh/languages/
   languages.javascript = {
     enable = true;
