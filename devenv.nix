@@ -12,6 +12,12 @@
     nodePackages.pnpm
   ];
 
+  # Use nixpkgs Playwright browsers to avoid the dynamic binary issues on NixOS
+  # (this points Playwright to the browsers supplied by nixpkgs)
+  let
+  playwrightBrowsers = pkgs.playwright.driver.browsers; # nixpkgs playwright driver path
+  in
+
   # https://devenv.sh/languages/
   languages.javascript = {
     enable = true;
@@ -23,6 +29,11 @@
   };
 
   languages.typescript.enable = true;
+
+  env = lib.mkMerge [
+    (if playwrightBrowsers != null then { PLAYWRIGHT_BROWSERS_PATH = builtins.toString playwrightBrowsers; } else { })
+    { PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD = "1"; }
+  ];
 
   # https://devenv.sh/scripts/
   scripts.dev.exec = "pnpm run dev";
