@@ -12,6 +12,7 @@
     "validate": "tsx ./scripts/validate.ts",
     "validate:cover-letters": "tsx ./scripts/validateCoverLetters.ts",
     "test": "vitest"
+    ,"watch":"tsx ./scripts/watch.ts"
   },
   "dependencies": {
     "astro": "^3.2.3"
