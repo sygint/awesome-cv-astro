@@ -2,11 +2,14 @@
 import Base from "./Base.astro";
 import Header from "./Header.astro";
 
+
 const {
   position,
   greeting,
   signOff,
   details: { header: headerDetails },
+  // New prop for YAML-based cover letter
+  letter,
 } = Astro.props;
 
 const { name } = headerDetails;
@@ -17,17 +20,46 @@ const now = new Date().toLocaleDateString("en-us", {
   month: "long",
   day: "numeric",
 });
+
+// Handle YAML-based cover letter configuration
+let finalGreeting = greeting ?? letter?.greeting ?? "Dear Hiring Manager,";
+let finalSignOff = signOff ?? letter?.sign_off ?? "Sincerely,";
+let finalPosition = position ?? letter?.position ?? "";
+let paragraphs: string[] = [];
+
+if (letter && letter.blocks) {
+  // Simple variable substitution for {{company}}, {{position}}, etc.
+  const vars = {
+    ...(letter || {}),
+    ...(letter.variables || {}),
+  };
+  paragraphs = Object.values(letter.blocks).map((block: any) => {
+    if (typeof block !== 'string') return '';
+    return block.replace(/{{\s*(\w+)\s*}}/g, (_, v) => vars[v] ?? '');
+  });
+}
+
+// Check if we're using slot content (old style) or YAML blocks (new style)
+const hasSlotContent = Astro.slots.has('default');
 ---
 
 <Base>
   <Header details={headerDetails} />
   <div class="cover-letter-header">
-    <div class="position">For position of {position}</div>
+    <div class="position">For position of {finalPosition}</div>
     <div>{now}</div>
   </div>
-  <div>{greeting}</div>
-  <slot />
-  <div>{signOff ?? 'Sincerely,'}</div>
+  <div class="greeting">{finalGreeting}</div>
+  
+  {hasSlotContent ? (
+    <slot />
+  ) : (
+    paragraphs.map(paragraph => (
+      <p>{paragraph}</p>
+    ))
+  )}
+  
+  <div class="sign-off">{finalSignOff}</div>
   <div class="name">{name}</div>
 </Base>
 
@@ -44,7 +76,22 @@ const now = new Date().toLocaleDateString("en-us", {
     text-decoration: underline;
   }
 
+  .greeting {
+    margin-bottom: 1rem;
+  }
+
+  .sign-off {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
   .name {
     font-weight: bold;
+  }
+
+  p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    text-align: justify;
   }
 </style>

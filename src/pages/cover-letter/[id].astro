@@ -1,0 +1,43 @@
+---
+
+import CoverLetter from "../../components/CoverLetter.astro";
+import fs from 'fs';
+import path from 'path';
+import yaml from 'js-yaml';
+
+
+
+// Get all YAML files in the cover-letters directory
+export async function getStaticPaths() {
+  const dir = path.resolve(import.meta.env.SITE_ROOT || process.cwd(), 'cover-letters');
+  const files = fs.readdirSync(dir).filter(f => f.endsWith('.yml') || f.endsWith('.yaml'));
+  return files.map(file => ({
+    params: { id: path.basename(file, path.extname(file)) },
+  }));
+}
+
+
+const { id } = Astro.params;
+const coverLetterPath = path.resolve(import.meta.env.SITE_ROOT || process.cwd(), 'cover-letters', `${id}.yml`);
+const resumePath = path.resolve(import.meta.env.SITE_ROOT || process.cwd(), 'resume-details.yml');
+let letter = null;
+let resumeDetails = null;
+try {
+  const fileContent = fs.readFileSync(coverLetterPath, 'utf8');
+  letter = yaml.load(fileContent);
+} catch (e) {
+  throw new Error(`Cover letter file not found or invalid: ${coverLetterPath}`);
+}
+try {
+  const resumeContent = fs.readFileSync(resumePath, 'utf8');
+  resumeDetails = yaml.load(resumeContent);
+} catch (e) {
+  throw new Error(`Resume details file not found or invalid: ${resumePath}`);
+}
+
+---
+
+<CoverLetter 
+  details={resumeDetails}
+  letter={letter}
+/>
