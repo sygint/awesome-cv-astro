@@ -10,13 +10,15 @@
     "build-pdf": "tsx ./scripts/build.ts",
     "preview": "astro preview",
     "validate": "tsx ./scripts/validate.ts",
-    "validate:cover-letters": "tsx ./scripts/validateCoverLetters.ts"
+    "validate:cover-letters": "tsx ./scripts/validateCoverLetters.ts",
+    "test": "vitest"
   },
   "dependencies": {
     "astro": "^3.2.3"
   },
   "devDependencies": {
     "chokidar": "^3.5.3",
+    "vitest": "^1.0.0",
     "@rollup/plugin-yaml": "^4.1.2",
     "ajv": "^8.17.1",
     "ajv-formats": "^3.0.1",
