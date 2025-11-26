@@ -1,0 +1,23 @@
+# Example: Cover letter for a student/internship application
+header:
+  name: Meridian Foxglove
+  positions:
+    - Computer Science Student
+  contact:
+    email: meridian@example.com
+    phone: (555) 222-3333
+    location: University Town, TX
+    website: meridian.codes
+
+company: Future Innovations
+position: Software Engineering Intern
+hiring_manager: Ms. Jamie Rivera
+sign_off: Best regards
+
+blocks:
+  intro: |
+    I am a Computer Science student at Northeast Technical University and am excited to apply for the Software Engineering Intern position at {{company}}. My coursework and projects have prepared me to contribute to your team.
+  body: |
+    I have experience with Python, JavaScript, and collaborative software projects. I am eager to learn from the talented engineers at {{company}} and contribute to real-world solutions.
+  closing: |
+    Thank you for your time and consideration. I look forward to the possibility of joining {{company}} as an intern.

@@ -1,0 +1,23 @@
+# Example: Cover letter for a software engineering position
+header:
+  name: Solstice Ravencroft
+  positions:
+    - Software Engineer
+  contact:
+    email: solstice@example.com
+    phone: (555) 123-4567
+    location: Fictional City, CA
+    website: solstice.dev
+
+company: Acme Tech
+position: Software Engineer
+hiring_manager: Dr. Ada Lovelace
+sign_off: Sincerely
+
+blocks:
+  intro: |
+    I am excited to apply for the Software Engineer position at {{company}}. My experience in full-stack development and my passion for building robust, user-friendly applications make me a strong fit for your team.
+  body: |
+    At my previous role, I led the development of scalable web applications using modern frameworks. I thrive in collaborative environments and am eager to contribute to {{company}}'s mission.
+  closing: |
+    Thank you for considering my application. I look forward to the opportunity to discuss how my skills can benefit {{company}}.

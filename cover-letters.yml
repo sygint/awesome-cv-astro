@@ -1,0 +1,224 @@
+# Cover Letters Configuration
+# Create multiple customized cover letters from reusable content blocks
+
+# Content blocks that can be reused across multiple cover letters
+contentBlocks:
+  # Opening paragraphs
+  opening_technical: |
+    I am writing to express my strong interest in the {{position}} position at {{company}}. With {{years_experience}} years of experience in software development and a proven track record of building scalable systems, I am excited about the opportunity to contribute to {{company}}'s mission.
+
+  opening_enthusiastic: |
+    I was thrilled to discover the {{position}} opening at {{company}}. As someone who has followed {{company}}'s work in {{industry}} with great admiration, I am eager to bring my skills and passion to your team.
+
+  opening_academic: |
+    I am writing to apply for the {{position}} position at {{company}}. My research background in {{research_area}} and {{publications_count}} peer-reviewed publications align closely with the innovative work being done at {{company}}.
+
+  opening_student: |
+    As a recent graduate with a degree in {{degree}}, I am excited to apply for the {{position}} role at {{company}}. My academic projects and internship experience have prepared me well for this opportunity.
+
+  # Experience highlights
+  experience_fullstack: |
+    In my current role at {{current_company}}, I have led the development of {{project_description}}, resulting in {{achievement}}. My expertise spans both frontend and backend technologies, including {{technologies}}.
+
+  experience_leadership: |
+    As {{current_title}} at {{current_company}}, I have successfully managed cross-functional teams of {{team_size}} engineers, delivered {{projects_count}} major projects, and improved team productivity by {{improvement_percentage}}.
+
+  experience_design: |
+    During my time at {{current_company}}, I have designed user experiences for {{user_count}} users, conducted {{research_count}} user research studies, and increased user satisfaction scores by {{satisfaction_increase}}.
+
+  experience_research: |
+    My research at {{current_institution}} has focused on {{research_focus}}, resulting in {{publications_count}} publications and {{citations_count}} citations. I have successfully secured {{grants_amount}} in research funding.
+
+  # Why this company
+  why_company_innovation: |
+    I am particularly drawn to {{company}}'s commitment to {{company_value}}. Your recent work on {{recent_project}} demonstrates the kind of innovative thinking I want to be part of.
+
+  why_company_mission: |
+    {{company}}'s mission to {{company_mission}} resonates deeply with my personal values. I believe my background in {{relevant_background}} positions me well to contribute meaningfully to this goal.
+
+  why_company_technical: |
+    I am impressed by {{company}}'s technical stack and engineering culture. Your use of {{technology}} and focus on {{technical_value}} aligns perfectly with my expertise and interests.
+
+  why_company_growth: |
+    {{company}}'s rapid growth in the {{industry}} space is exciting. I am eager to join during this pivotal time and help scale {{specific_area}} to meet increasing demand.
+
+  # Skills alignment
+  skills_technical: |
+    My proficiency in {{key_skills}} directly aligns with the requirements outlined in your job posting. I am confident I can hit the ground running and contribute to {{project_area}} from day one.
+
+  skills_soft: |
+    Beyond technical skills, I bring strong {{soft_skills}} abilities that I believe are essential for success in this role. I thrive in {{work_environment}} environments and excel at {{collaboration_style}}.
+
+  skills_learning: |
+    I am a quick learner with a track record of rapidly mastering new technologies. Recently, I taught myself {{new_skill}} and applied it to {{application}}, demonstrating my ability to adapt and grow.
+
+  # Closing paragraphs
+  closing_professional: |
+    I would welcome the opportunity to discuss how my experience and skills align with {{company}}'s needs. I am available for an interview at your convenience and look forward to the possibility of contributing to your team.
+
+  closing_enthusiastic: |
+    I am genuinely excited about the possibility of joining {{company}} and contributing to {{specific_goal}}. Thank you for considering my application—I look forward to the opportunity to discuss how I can add value to your team.
+
+  closing_academic: |
+    I believe my research experience and technical skills make me an ideal fit for this position. I would be happy to discuss my work in more detail and explore how I can contribute to {{company}}'s research initiatives.
+
+  closing_student: |
+    I am eager to begin my career at a company like {{company}} where I can learn from experienced professionals and contribute my fresh perspective. Thank you for considering my application.
+
+# Define cover letter templates
+letters:
+  # Software Engineer - Tech Startup
+  - id: techstartup-fullstack
+    template: professional
+    variables:
+      position: Senior Full Stack Engineer
+      company: TechVenture Systems
+      industry: cloud infrastructure
+      years_experience: 5
+      current_company: Digital Solutions Corp
+      current_title: Full Stack Developer
+      project_description: a microservices architecture handling 10M+ daily requests
+      achievement: a 40% reduction in API response time
+      technologies: React, Node.js, PostgreSQL, and AWS
+      company_value: developer experience and infrastructure reliability
+      recent_project: the automated deployment pipeline featured in TechCrunch
+      relevant_background: distributed systems and DevOps practices
+      key_skills: TypeScript, React, Go, and cloud architecture
+      project_area: backend infrastructure
+      soft_skills: communication and problem-solving
+      work_environment: fast-paced, collaborative
+      collaboration_style: pair programming and code reviews
+      specific_goal: building scalable infrastructure solutions
+    blocks:
+      - opening_technical
+      - experience_fullstack
+      - why_company_innovation
+      - skills_technical
+      - closing_enthusiastic
+
+  # Designer - Design Agency
+  - id: designagency-ux
+    template: enthusiastic
+    variables:
+      position: Senior UX Designer
+      company: CreativeMinds Design
+      industry: digital product design
+      current_company: DesignLab Studios
+      user_count: "500,000+"
+      research_count: 25
+      satisfaction_increase: 35%
+      company_mission: create intuitive digital experiences that delight users
+      relevant_background: user research and interaction design
+      key_skills: Figma, user research, prototyping, and usability testing
+      project_area: user experience research
+      soft_skills: empathy and storytelling
+      work_environment: creative, design-focused
+      collaboration_style: design workshops and stakeholder presentations
+      specific_goal: crafting exceptional user experiences
+    blocks:
+      - opening_enthusiastic
+      - experience_design
+      - why_company_mission
+      - skills_soft
+      - closing_enthusiastic
+
+  # Academic - Research Lab
+  - id: research-postdoc
+    template: academic
+    variables:
+      position: Postdoctoral Researcher
+      company: Advanced Computing Research Institute
+      research_area: machine learning and natural language processing
+      publications_count: 12
+      current_institution: University Research Lab
+      research_focus: transformer architectures for low-resource languages
+      citations_count: 340
+      grants_amount: "$450,000"
+      company_value: open science and reproducible research
+      recent_project: multilingual LLM benchmark dataset
+      relevant_background: deep learning and computational linguistics
+      key_skills: PyTorch, research methodology, and academic writing
+      project_area: model interpretability research
+      technology: PyTorch and distributed training
+      technical_value: reproducibility and open-source contributions
+    blocks:
+      - opening_academic
+      - experience_research
+      - why_company_technical
+      - closing_academic
+
+  # Manager - Established Tech Company
+  - id: techcorp-manager
+    template: professional
+    variables:
+      position: Engineering Manager
+      company: GlobalTech Solutions
+      industry: enterprise software
+      years_experience: 8
+      current_company: Innovation Systems Inc
+      current_title: Senior Engineering Manager
+      team_size: 12
+      projects_count: 15
+      improvement_percentage: 45%
+      company_value: engineering excellence and team development
+      recent_project: transition to agile methodologies across engineering
+      relevant_background: technical leadership and talent development
+      key_skills: team leadership, agile methodologies, and technical strategy
+      project_area: team growth and delivery excellence
+      soft_skills: leadership and mentorship
+      work_environment: structured, process-driven
+      collaboration_style: one-on-ones and retrospectives
+      specific_goal: building high-performing engineering teams
+      specific_area: engineering process and team culture
+    blocks:
+      - opening_technical
+      - experience_leadership
+      - why_company_growth
+      - skills_soft
+      - closing_professional
+
+  # Student - Entry Level
+  - id: student-internship
+    template: enthusiastic
+    variables:
+      position: Software Engineering Intern
+      company: NextGen Technologies
+      degree: Computer Science
+      industry: mobile applications
+      new_skill: React Native
+      application: a personal fitness tracking app
+      company_mission: make technology accessible to everyone
+      relevant_background: mobile development and user interface design
+      key_skills: JavaScript, React, and Git
+      project_area: mobile app development
+      soft_skills: curiosity and adaptability
+      work_environment: mentorship-focused
+      collaboration_style: learning from senior developers
+      specific_goal: gaining real-world development experience
+    blocks:
+      - opening_student
+      - skills_learning
+      - why_company_mission
+      - closing_student
+
+# Template definitions (style/tone presets)
+templates:
+  professional:
+    greeting: "Dear Hiring Manager,"
+    signOff: "Sincerely,"
+    tone: "formal and concise"
+    
+  enthusiastic:
+    greeting: "Dear Hiring Team,"
+    signOff: "With enthusiasm,"
+    tone: "warm and energetic"
+    
+  academic:
+    greeting: "Dear Search Committee,"
+    signOff: "Respectfully,"
+    tone: "scholarly and detailed"
+    
+  technical:
+    greeting: "Hello,"
+    signOff: "Best regards,"
+    tone: "direct and technical"

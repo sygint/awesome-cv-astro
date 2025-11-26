@@ -1,0 +1,23 @@
+# Example: Cover letter for a research position
+header:
+  name: Dr. Lysander Quilbrook
+  positions:
+    - Research Scientist
+  contact:
+    email: lysander@example.com
+    phone: (555) 987-6543
+    location: Academic City, NY
+    website: lysanderquill.com
+
+company: Institute of Advanced Studies
+position: Research Scientist
+hiring_manager: Prof. Rowan Sage
+sign_off: Respectfully
+
+blocks:
+  intro: |
+    I am writing to express my interest in the Research Scientist position at {{company}}. My background in computational biology and my record of peer-reviewed publications align well with your institute's goals.
+  body: |
+    My doctoral research focused on algorithmic approaches to genomics, and I have led interdisciplinary teams in both academic and industry settings. I am eager to bring my expertise to {{company}}.
+  closing: |
+    Thank you for your consideration. I look forward to discussing my research and how I can contribute to your team.
