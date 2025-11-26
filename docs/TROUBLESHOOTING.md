@@ -262,14 +262,11 @@ export default defineConfig({
 1. **Clear cache and retry**:
 ```bash
 rm -rf node_modules package-lock.json
-npm install
 ```
 
 2. **Check Node version**:
 ```bash
 node --version  # Should be 20+
-```
-
 3. **Use npm instead of pnpm** if mixing package managers:
 ```bash
 rm pnpm-lock.yaml
