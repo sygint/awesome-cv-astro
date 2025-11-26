@@ -9,9 +9,135 @@ This guide covers how to customize your resume's appearance, layout, and content
 - [Layout & Spacing](#layout--spacing)
 - [Sections](#sections)
 - [Header Configuration](#header-configuration)
+- [Cover Letters](#cover-letters)
 - [Advanced Customization](#advanced-customization)
 
 ## Colors
+
+## Cover Letters
+
+Awesome CV Astro supports a robust, multi-file cover letter system. Each cover letter is defined in its own YAML file, allowing you to manage multiple tailored letters for different organizations and positions.
+
+### Directory Structure
+
+Place your cover letter YAML files in the `cover-letters/` directory at the project root:
+
+```
+cover-letters/
+  acme-frontend.yml
+  globex-data-scientist.yml
+  ...
+```
+
+Each file represents a single cover letter. The filename is for your reference and does not affect the output name.
+
+### YAML Schema
+
+Each cover letter YAML should include at least the following fields:
+
+```yaml
+organization: Acme Corp
+position: Frontend Engineer
+date: 2024-05-01
+recipient:
+  name: Jane Smith
+  title: Head of Engineering
+  company: Acme Corp
+  address: 123 Main St, Springfield
+body: |
+  I am excited to apply for the Frontend Engineer position at Acme Corp. ...
+closing: Sincerely,
+signature: John Doe
+variables:
+  github: johndoe
+  portfolio: johndoe.dev
+```
+
+#### Required Fields
+- `organization`: The company or organization name
+- `position`: The job title
+- `body`: The main content of your letter (supports variable substitution)
+
+#### Optional Fields
+- `date`: Date of the letter
+- `recipient`: Object with `name`, `title`, `company`, `address`
+- `closing`: Closing phrase (e.g., "Sincerely,")
+- `signature`: Your name or signature
+- `variables`: Key-value pairs for template substitution
+
+### Variable Substitution
+
+You can use variables in your `body` or other fields by referencing them with double curly braces, e.g. `{{github}}`. Define these in the `variables` section of your YAML.
+
+Example:
+
+```yaml
+body: |
+  My GitHub is {{github}} and my portfolio is {{portfolio}}.
+variables:
+  github: johndoe
+  portfolio: johndoe.dev
+```
+
+### Output File Naming
+
+When you build cover letters, output files are named using the organization and position fields, sanitized for filesystem safety. For example:
+
+```
+build/cover-letter/acme-corp-frontend-engineer.pdf
+build/cover-letter/globex-data-scientist.pdf
+```
+
+This makes it easy to identify each letter by its target.
+
+### Building Cover Letters
+
+To generate all cover letters (HTML, PDF, PNG), run:
+
+```bash
+pnpm run build
+```
+
+or, for just cover letters:
+
+```bash
+pnpm run build:cover-letters
+```
+
+The build script will process each YAML in `cover-letters/`, apply variable substitution, and output files to `build/cover-letter/`.
+
+### Example Cover Letter YAML
+
+```yaml
+organization: Globex Corporation
+position: Data Scientist
+date: 2024-06-01
+recipient:
+  name: Dr. Emily Zhang
+  title: Director of Analytics
+  company: Globex Corporation
+  address: 456 Elm St, Metropolis
+body: |
+  Dear Dr. Zhang,
+
+  I am writing to express my interest in the Data Scientist position at Globex Corporation. My experience in machine learning and data analysis ...
+
+  Sincerely,
+  {{signature}}
+closing: Best regards,
+signature: Alex Smith
+variables:
+  github: alexsmith
+  portfolio: alexsmith.dev
+```
+
+### Tips
+- Use a separate YAML file for each application to keep your letters organized.
+- Use variables for any content that may change between letters (links, names, etc.).
+- The system supports any number of custom variables.
+- Output filenames are automatically sanitized and unique per organization/position.
+
+For more details, see the [README](../README.md) or open an issue if you need help.
 
 ### Changing the Highlight Color
 

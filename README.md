@@ -120,6 +120,7 @@ The conversion scripts (`convertToPdf.ts` and `convertToPng.ts`) use Playwright'
 
 **Note**: On NixOS, the devenv configuration automatically uses pre-patched Playwright browsers from nixpkgs, eliminating the need for manual browser installation or patching.
 
+
 ## Features
 
 - ✅ **Multiple Section Types**: Technologies, Experience, Projects, Education, Certifications, Honors & Awards, Publications, Volunteer Experience
@@ -127,7 +128,7 @@ The conversion scripts (`convertToPdf.ts` and `convertToPng.ts`) use Playwright'
 - ✅ **Schema Validation**: Built-in validation with helpful error messages
 - ✅ **PDF & PNG Generation**: Automated conversion using Playwright
 - ✅ **Responsive Design**: Clean, professional layout optimized for ATS systems
-- ✅ **Cover Letters**: Support for multiple cover letter templates
+- ✅ **Cover Letters**: Add as many cover letter YAMLs as you want in `cover-letters/`—each generates a PDF/PNG named by organization and position. [See details & example.](docs/CUSTOMIZATION.md#cover-letters)
 
 ## Documentation
 
