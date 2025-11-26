@@ -6,6 +6,7 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "npm run validate && astro build && tsx ./scripts/build.ts",
+    "build:html": "npm run validate && npx astro build",
     "build-pdf": "tsx ./scripts/build.ts",
     "preview": "astro preview",
     "validate": "tsx ./scripts/validate.ts",
@@ -15,6 +16,7 @@
     "astro": "^3.2.3"
   },
   "devDependencies": {
+    "chokidar": "^3.5.3",
     "@rollup/plugin-yaml": "^4.1.2",
     "ajv": "^8.17.1",
     "ajv-formats": "^3.0.1",
