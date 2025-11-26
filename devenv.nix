@@ -1,74 +1,61 @@
 { pkgs, lib, config, inputs, ... }:
 
-let
-  # Use nixpkgs Playwright browsers (already patched for NixOS)
-  playwrightBrowsers = pkgs.playwright-driver.browsers;
-in
 {
   # https://devenv.sh/basics/
   env.GREET = "devenv";
 
-  # Point Playwright to nixpkgs browsers (patched for NixOS)
-  env.PLAYWRIGHT_BROWSERS_PATH = "${playwrightBrowsers}";
-  env.PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD = "1";
-
   # https://devenv.sh/packages/
   packages = with pkgs; [
     git
-    nodePackages.pnpm
     curl
     jq
+    nodePackages.pnpm
   ];
 
   # https://devenv.sh/languages/
   languages.javascript = {
     enable = true;
     package = pkgs.nodejs_20;
-    npm = {
+    pnpm = {
       enable = true;
-      install.enable = true; # Auto npm install on shell enter
+      install.enable = true; # Auto pnpm install on shell enter
     };
   };
 
   languages.typescript.enable = true;
 
   # https://devenv.sh/scripts/
-  scripts.dev.exec = "npm run dev";
-  scripts.build.exec = "npm run build";
-  scripts.lint.exec = "npm run lint";
-  scripts.test.exec = "npm test";
-
-  # Run PDF generation with nixpkgs Playwright browsers
-  scripts.build-pdf.exec = ''
-    pnpm run build-pdf
-  '';
+  scripts.dev.exec = "pnpm run dev";
+  scripts.build.exec = "pnpm run build";
+  scripts.lint.exec = "pnpm run lint";
+  scripts.test.exec = "pnpm test";
 
   enterShell = ''
     echo "🔧 Node.js Development Environment"
     echo "=================================="
-    echo "📁 Project: $(basename $(pwd))"
-    echo "📦 Node.js: $(node --version) (nixpkgs: nodejs_20)"
-    echo "📦 npm: $(npm --version)"
-    echo "🎭 Playwright: v1.54.1 (using NixOS-patched browsers from nixpkgs)"
+    echo "📁 Project: \$(basename \$(pwd))"
+    echo "📦 Node.js: \$(node --version) (nixpkgs: nodejs_20)"
+    echo "📦 pnpm: \$(pnpm --version)"
     echo ""
     
     # Show version detection info
     echo "📍 Version source: default"
     if [[ -f package.json ]] && command -v jq >/dev/null && jq -e '.volta.node' package.json >/dev/null 2>&1; then
-      echo "   └─ package.json volta.node = $(jq -r '.volta.node' package.json)"
+      echo "   └─ package.json volta.node = \$(jq -r '.volta.node' package.json)"
     elif [[ -f .nvmrc ]]; then
-      echo "   └─ .nvmrc = $(cat .nvmrc)"
+      echo "   └─ .nvmrc = \$(cat .nvmrc)"
     else
       echo "   └─ using default Node.js 20"
     fi
     echo ""
     
     echo "🚀 Available scripts:"
-    echo "  dev       - Start development server"
-    echo "  build     - Build for production"  
-    echo "  build-pdf - Generate PDF with Playwright"
-    echo "  lint      - Run linting"
-    echo "  test      - Run tests"
+    echo "  dev   - Start development server (pnpm run dev)"
+    echo "  build - Build for production (pnpm run build)"
+    echo "  lint  - Run linting (pnpm run lint)"
+    echo "  test  - Run tests (pnpm test)"
+    echo ""
+    echo "💡 Using pnpm as package manager"
     echo ""
   '';
 
@@ -76,8 +63,10 @@ in
   # services.postgres.enable = true;
 
   # https://devenv.sh/pre-commit-hooks/
-  git-hooks.hooks.shellcheck.enable = true;
-  git-hooks.hooks.nixpkgs-fmt.enable = true;
+  # Uncomment to enable additional pre-commit hooks:
+  # git-hooks.hooks.prettier.enable = true;
+  # git-hooks.hooks.eslint.enable = true;
+  # git-hooks.hooks.typos.enable = true;
 
   # See full reference at https://devenv.sh/reference/options/
 }

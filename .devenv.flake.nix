@@ -3,18 +3,18 @@
     let
       version = "1.10.0";
       system = "x86_64-linux";
-      devenv_root = "/home/syg/Projects/personal/awesome-cv-astro";
-      devenv_dotfile = "/home/syg/Projects/personal/awesome-cv-astro/.devenv";
+      devenv_root = "/home/syg/Projects/open-source/awesome-cv-astro";
+      devenv_dotfile = "/home/syg/Projects/open-source/awesome-cv-astro/.devenv";
       devenv_dotfile_path = ./.devenv;
       devenv_tmpdir = "/run/user/1000";
-      devenv_runtime = "/run/user/1000/devenv-d08e118";
+      devenv_runtime = "/run/user/1000/devenv-d8e03c6";
       devenv_istesting = false;
       devenv_direnvrc_latest_version = 1;
       container_name = null;
       active_profiles = [ ];
       hostname = "orion";
       username = "syg";
-      git_root = "/home/syg/Projects/personal/awesome-cv-astro";
+      git_root = "/home/syg/Projects/open-source/awesome-cv-astro";
 
     in
     {
@@ -31,18 +31,18 @@
     let
       version = "1.10.0";
       system = "x86_64-linux";
-      devenv_root = "/home/syg/Projects/personal/awesome-cv-astro";
-      devenv_dotfile = "/home/syg/Projects/personal/awesome-cv-astro/.devenv";
+      devenv_root = "/home/syg/Projects/open-source/awesome-cv-astro";
+      devenv_dotfile = "/home/syg/Projects/open-source/awesome-cv-astro/.devenv";
       devenv_dotfile_path = ./.devenv;
       devenv_tmpdir = "/run/user/1000";
-      devenv_runtime = "/run/user/1000/devenv-d08e118";
+      devenv_runtime = "/run/user/1000/devenv-d8e03c6";
       devenv_istesting = false;
       devenv_direnvrc_latest_version = 1;
       container_name = null;
       active_profiles = [ ];
       hostname = "orion";
       username = "syg";
-      git_root = "/home/syg/Projects/personal/awesome-cv-astro";
+      git_root = "/home/syg/Projects/open-source/awesome-cv-astro";
 
       devenv =
         if builtins.pathExists (devenv_dotfile_path + "/devenv.json")
