@@ -41,14 +41,30 @@ const __dirname = dirname(__filename);
     for (const letter of letters) {
       console.log(`\n📋 Processing ${letter} cover letter...`);
       const coverLetterHtmlPath = join(coverLetterPath, letter, "index.html");
-      
+
+      // Try to load the corresponding YAML file for this letter
+      // Assume the YAML file is in ../cover-letters/ and matches the letter directory name
+      const yamlPath = join(__dirname, "../cover-letters", `${letter}.yml`);
+      let org = "organization", pos = "position";
+      try {
+        const yamlContent = await readFile(yamlPath, "utf8");
+        const letterData = parse(yamlContent);
+        org = letterData.company || letterData.organization || org;
+        pos = letterData.position || pos;
+      } catch (e) {
+        console.warn(`⚠️ Could not read YAML for ${letter}:`, e.message);
+      }
+      // Sanitize for filesystem
+      const safe = (s: string) => String(s).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+      const outName = `cover-letter.${safe(org)}-${safe(pos)}`;
+
       await convertToPdf(
         coverLetterHtmlPath,
-        `./build/cover-letter.${letter}.pdf`
+        `./build/${outName}.pdf`
       );
       await convertToPng(
         coverLetterHtmlPath,
-        `./build/cover-letter.${letter}`
+        `./build/${outName}`
       );
     }
 
