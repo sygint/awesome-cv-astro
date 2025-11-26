@@ -5,17 +5,24 @@
   env.GREET = "devenv";
 
   # https://devenv.sh/packages/
-  packages = with pkgs; [
-    git
-    curl
-    jq
-    nodePackages.pnpm
-  ];
+  let
+  playwrightDriver =
+    if pkgs ? playwright-driver then pkgs.playwright-driver else null;
+  in
+  packages = with pkgs; (
+    [
+      git
+      curl
+      jq
+      nodePackages.pnpm
+    ] ++ (if playwrightDriver != null then [ playwrightDriver ] else [ ])
+  );
 
   # Use nixpkgs Playwright browsers to avoid the dynamic binary issues on NixOS
   # (this points Playwright to the browsers supplied by nixpkgs)
   let
-  playwrightBrowsers = pkgs.playwright.driver.browsers; # nixpkgs playwright driver path
+  playwrightBrowsers =
+    if playwrightDriver != null then playwrightDriver.browsers else null;
   in
 
   # https://devenv.sh/languages/
