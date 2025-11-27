@@ -104,6 +104,7 @@ All commands are run from the root of the project, from a terminal:
 | `pnpm build`               | Build your resume to `./build/` and convert to PDF and PNG |
 | `pnpm build-pdf`           | Generate PDF and PNG from already-built HTML              |
 | `pnpm preview`             | Preview your already built resume in the browser          |
+| `pnpm watch`               | Start watch mode to rebuild and validate on changes (fast dev loop) |
 
 ## How PDF and PNG Generation Works
 
