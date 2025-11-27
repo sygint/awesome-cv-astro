@@ -1,6 +1,5 @@
 # build output - keep preview images for README
 build/*
-!build/*.pdf
 !build/*.png
 # generated types
 .astro/
@@ -28,4 +27,6 @@ pnpm-debug.log*
 .devenv.flake.nix
 .direnv
 
-./.specstory/
+## Ignore all .specstory artifacts and PRD files
+.specstory/
+PRD*

@@ -4,9 +4,12 @@ A fork of [awesome-cv-react](https://github.com/sygint/awesome-cv-react) to [Ele
 
 ## Preview
 
-| Resume | Cover Letter |
-|:---:|:---:|
-| [![Resume](build/Solstice-Ravencroft.resume.png)](build/Solstice-Ravencroft.pdf)  | [![Cover Letter](build/cover-letter.sample.png)](build/cover-letter.sample.pdf) |
+Build a local preview using `pnpm run build` then open the generated files in `./build/`:
+
+- Resume HTML: `./build/resume/index.html`
+- Cover Letter HTML: `./build/cover-letter/<letter>/index.html`
+
+If you'd like a quick visual preview, generate images using `pnpm run build` then view the generated PNGs in `./build/`.
 
 # Getting Started
 

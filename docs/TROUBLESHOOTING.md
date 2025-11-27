@@ -247,7 +247,7 @@ export default defineConfig({
 1. Save a `.astro` file to trigger reload, or
 2. Restart dev server after YAML changes
 
-**Future**: Watch mode planned (see PRD.md Phase 2.1)
+**Future**: Watch mode planned; monitor Issues for status and progress.
 
 ---
 
@@ -380,4 +380,4 @@ astro build && tsx ./scripts/build.ts
 
 - GitHub Issues: Bug reports and feature requests
 - Discussions: Questions and community support
-- PRD.md: Check if issue is known/planned
+-- Check project roadmap or open an issue to confirm if the issue is planned

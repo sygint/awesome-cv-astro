@@ -18,28 +18,7 @@ path {
   fill: var(--colorLightText) !important;
 }
 
-/* 
-html {
-  max-width: 21cm;
-  margin: 0 auto;
-  background: #777;
-}
-
-body {
-  padding: 0;
-  background: #fff;
-}
-
-.overlay {
-  position: absolute;
-  z-index: 100;
-  width: 16cm;
-  height: 29.7cm;
-  background: url("../resume_page_1.png") no-repeat;
-}
-
-.resume {
-  position: absolute;
-  z-index: 500;
-  padding: var(--pageMargins);
-} */
+/* Removed unused layout preview CSS and overlay helper
+   - This was legacy demo CSS and is no longer used in production.
+   - Keeping the file small and focused on the resume styles.
+*/

@@ -455,4 +455,4 @@ See the `examples/` directory for complete resume examples:
 
 - Check [GitHub Issues](https://github.com/sygint/awesome-cv-astro/issues)
 - Review [README.md](../README.md) for setup instructions
-- See [PRD.md](../PRD.md) for planned features
+- Project roadmap and planned features are maintained internally and are not published in the repository; open an issue if you want to confirm feature status.
